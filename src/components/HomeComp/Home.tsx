@@ -1,6 +1,6 @@
-import { Stack, Box } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import Image from "next/image";
-export const Nuur = () => {
+export const Homee = () => {
   return (
     <Stack
       width="full"
@@ -9,21 +9,22 @@ export const Nuur = () => {
       direction={"row"}
       alignItems={"center"}
       justifyContent={"space-between"}
-      px="120px"
+      px="200px"
       sx={{
         backgroundColor: "#18BA51",
         backgroundImage: "url(/backImage.png)",
       }}
     >
       <Stack
-        fontSize={"55px"}
         display={"flex"}
         gap={"20px"}
         sx={{
           direction: "column",
         }}
       >
-        <Box
+        <Typography
+          width={"360px"}
+          fontSize={"55px"}
           lineHeight={"90%"}
           fontWeight={"510"}
           sx={{
@@ -31,14 +32,14 @@ export const Nuur = () => {
           }}
         >
           Pinecone Food delivery
-        </Box>
+        </Typography>
         <Stack
           height={"1px"}
           sx={{
             backgroundColor: "white",
           }}
         ></Stack>
-        <Box
+        <Typography
           width={"360px"}
           sx={{
             color: "#FFFFFF",
@@ -46,13 +47,13 @@ export const Nuur = () => {
           fontSize={"22px"}
         >
           Horem ipsum dolor sit amet, consectetur adipiscing elit.
-        </Box>
+        </Typography>
       </Stack>
       <Stack display={"flex"} position={"relative"}>
-        <Box zIndex={"1"} width={543} height={538}>
+        <Typography zIndex={"1"} width={543} height={538}>
           <Image alt="" src="/tsuiwan.png" width={443} height={438} />
-        </Box>
-        <Box
+        </Typography>
+        <Typography
           zIndex={"10"}
           position={"absolute"}
           top={"120px"}
@@ -61,7 +62,7 @@ export const Nuur = () => {
           height={538}
         >
           <Image alt="" src="/katsudon.png" width={313} height={313} />
-        </Box>
+        </Typography>
       </Stack>
     </Stack>
   );

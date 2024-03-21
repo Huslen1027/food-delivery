@@ -1,19 +1,19 @@
 import * as React from "react";
-import Searchicon from "@/svg/HeaderIcon/Searchicon";
+import Searchicon from "../Icon/HeaderIcon/Searchicon";
 import IconButton from "@mui/material/IconButton";
 import { Button, InputBase, Stack } from "@mui/material";
-import Pineconelogo from "@/svg/HeaderIcon/Pineconelogo";
+import Pineconelogo from "../Icon/HeaderIcon/Pineconelogo";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import ShoppingIcon from "@/svg/HeaderIcon/ShoppingIcon";
-import PersonIcon from "@/svg/HeaderIcon/PersonIcon";
+import PersonIcon from "../Icon/HeaderIcon/PersonIcon";
+import ShoppingIcon from "../Icon/HeaderIcon/ShoppingIcon";
 export const Header = () => {
   return (
     <Grid
       width="full"
       component="div"
-      px="120px"
-      py="10px"
+      px="200px"
+      pt={"10px"}
       display="flex"
       justifyContent={"space-between"}
     >
