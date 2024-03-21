@@ -8,8 +8,8 @@ export const Homee = () => {
       height="788px"
       direction={"row"}
       alignItems={"center"}
-      justifyContent={"space-between"}
-      px="200px"
+      justifyContent={"space-around"}
+      px={"400px"}
       sx={{
         backgroundColor: "#18BA51",
         backgroundImage: "url(/backImage.png)",

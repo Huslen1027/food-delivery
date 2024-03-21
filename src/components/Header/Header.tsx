@@ -7,6 +7,7 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import PersonIcon from "../Icon/HeaderIcon/PersonIcon";
 import ShoppingIcon from "../Icon/HeaderIcon/ShoppingIcon";
+import Link from "next/link";
 export const Header = () => {
   return (
     <Grid
@@ -27,33 +28,40 @@ export const Header = () => {
         >
           <Pineconelogo />
         </IconButton>
-        <Button
-          color="inherit"
-          sx={{
-            fontWeight: "540",
-            fontSize: "16px",
-          }}
-        >
-          НҮҮР
-        </Button>
-        <Button
-          color="inherit"
-          sx={{
-            fontWeight: "540",
-            fontSize: "16px",
-          }}
-        >
-          ХООЛНЫ ЦЭС
-        </Button>
-        <Button
-          color="inherit"
-          sx={{
-            fontWeight: "540",
-            fontSize: "16px",
-          }}
-        >
-          ХҮРГЭЛТИЙН БҮС
-        </Button>
+        <Link href={"/"}>
+          <Button
+            color="inherit"
+            sx={{
+              fontWeight: "540",
+              fontSize: "16px",
+            }}
+          >
+            НҮҮР
+          </Button>
+        </Link>
+        <Link href={""}>
+          {" "}
+          <Button
+            color="inherit"
+            sx={{
+              fontWeight: "540",
+              fontSize: "16px",
+            }}
+          >
+            ХООЛНЫ ЦЭС
+          </Button>
+        </Link>
+        <Link href={""}>
+          <Button
+            color="inherit"
+            sx={{
+              fontWeight: "540",
+              fontSize: "16px",
+            }}
+          >
+            ХҮРГЭЛТИЙН БҮС
+          </Button>
+        </Link>
       </Grid>
       <Grid component="div" display="flex" gap="40px" alignItems="center">
         <Paper

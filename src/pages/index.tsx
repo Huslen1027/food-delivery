@@ -1,7 +1,6 @@
-import Header from "@/components/Header/Header";
 import { Grid } from "@mui/material";
 import { Homee } from "@/components/HomeComp/Home";
-import { Footer } from "@/components/Footer/Footer";
+
 import { Advise } from "@/components/HomeComp/Advice";
 export const Home = () => {
   return (
@@ -11,10 +10,8 @@ export const Home = () => {
       flexDirection={"column"}
       height={"3486px"}
     >
-      <Header />
       <Homee />
       <Advise />
-      <Footer />
     </Grid>
   );
 };

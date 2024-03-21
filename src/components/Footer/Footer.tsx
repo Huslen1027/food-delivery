@@ -3,6 +3,7 @@ import { PineLogo } from "../Icon/FooterIcon/PineLogo";
 import { FaceBookLogo } from "../Icon/FooterIcon/Facebooklogo";
 import { TwitterLogo } from "../Icon/FooterIcon/Twitterlogo";
 import { InstragramLogo } from "../Icon/FooterIcon/Instagramlogo";
+import Link from "next/link";
 export const Footer = () => {
   return (
     <Grid
@@ -30,12 +31,27 @@ export const Footer = () => {
           </Typography>
         </Stack>
         <Stack display="flex" direction={"row"} gap={"70px"} color={"white"}>
-          <Typography>Нүүр</Typography>
-          <Typography>Холбоо барих</Typography>
-          <Typography>Хоолны цэс</Typography>
-          <Typography>Үйлчилгээний нөхцөл</Typography>
-          <Typography>Хүргэлтийн бүс</Typography>
-          <Typography>Нууцлалын бодлого</Typography>
+          <Link href={"/"}>
+            <Typography borderBottom={"1px solid white"}>Нүүр</Typography>
+          </Link>
+          <Typography borderBottom={"1px solid white"}>Холбоо барих</Typography>
+          <Typography borderBottom={"1px solid white"}>Хоолны цэс</Typography>
+          <Link href={"/information4"}>
+            <Typography borderBottom={"1px solid white"}>
+              Үйлчилгээний нөхцөл
+            </Typography>
+          </Link>
+          <Link href={"/information5"}>
+            <Typography borderBottom={"1px solid white"}>
+              Хүргэлтийн бүс
+            </Typography>
+          </Link>
+
+          <Link href={"/information6"}>
+            <Typography borderBottom={"1px solid white"}>
+              Нууцлалын бодлого
+            </Typography>
+          </Link>
         </Stack>
         <Stack display={"flex"} direction={"row"} gap={"18px"}>
           <FaceBookLogo />
