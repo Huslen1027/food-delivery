@@ -23,6 +23,7 @@ export const Footer = () => {
         alignItems={"center"}
         width={"1200px"}
         gap={"40px"}
+        fontFamily={"sda"}
       >
         <Stack direction={"row"} gap={"10px"}>
           <PineLogo />
