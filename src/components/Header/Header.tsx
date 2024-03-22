@@ -1,12 +1,12 @@
 import * as React from "react";
-import Searchicon from "../Icon/HeaderIcon/Searchicon";
+import Searchicon from "../../Icon/HeaderIcon/Searchicon";
 import IconButton from "@mui/material/IconButton";
 import { Button, InputBase, Stack } from "@mui/material";
-import Pineconelogo from "../Icon/HeaderIcon/Pineconelogo";
+import Pineconelogo from "../../Icon/HeaderIcon/Pineconelogo";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import PersonIcon from "../Icon/HeaderIcon/PersonIcon";
-import ShoppingIcon from "../Icon/HeaderIcon/ShoppingIcon";
+import PersonIcon from "../../Icon/HeaderIcon/PersonIcon";
+import ShoppingIcon from "../../Icon/HeaderIcon/ShoppingIcon";
 import Link from "next/link";
 export const Header = () => {
   return (

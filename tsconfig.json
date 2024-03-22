@@ -20,7 +20,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/pages/footerinformation/information14tsx"
+    "src/pages/information/information14tsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,8 +1,8 @@
 import { Grid, Stack, Typography } from "@mui/material";
-import { PineLogo } from "../Icon/FooterIcon/PineLogo";
-import { FaceBookLogo } from "../Icon/FooterIcon/Facebooklogo";
-import { TwitterLogo } from "../Icon/FooterIcon/Twitterlogo";
-import { InstragramLogo } from "../Icon/FooterIcon/Instagramlogo";
+import { PineLogo } from "../../Icon/FooterIcon/PineLogo";
+import { FaceBookLogo } from "../../Icon/FooterIcon/Facebooklogo";
+import { TwitterLogo } from "../../Icon/FooterIcon/Twitterlogo";
+import { InstragramLogo } from "../../Icon/FooterIcon/Instagramlogo";
 import Link from "next/link";
 export const Footer = () => {
   return (
@@ -38,18 +38,18 @@ export const Footer = () => {
           </Link>
           <Typography borderBottom={"1px solid white"}>Холбоо барих</Typography>
           <Typography borderBottom={"1px solid white"}>Хоолны цэс</Typography>
-          <Link href={"/footerinformation4"}>
+          <Link href={"/information/footerinformation4"}>
             <Typography borderBottom={"1px solid white"}>
               Үйлчилгээний нөхцөл
             </Typography>
           </Link>
-          <Link href={"/information5"}>
+          <Link href={"/information/footerinformation5"}>
             <Typography borderBottom={"1px solid white"}>
               Хүргэлтийн бүс
             </Typography>
           </Link>
 
-          <Link href={"/footerinformation6"}>
+          <Link href={"/information/footerinformation6"}>
             <Typography borderBottom={"1px solid white"}>
               Нууцлалын бодлого
             </Typography>

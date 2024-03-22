@@ -1,6 +1,6 @@
-import { Book } from "@/components/Icon/Homeicon/Adviceicons/Book";
-import { Clock } from "@/components/Icon/Homeicon/Adviceicons/Clock";
-import { Salat } from "@/components/Icon/Homeicon/Adviceicons/Salat";
+import { Book } from "@/Icon/Homeicon/Adviceicons/Book";
+import { Clock } from "@/Icon/Homeicon/Adviceicons/Clock";
+import { Salat } from "@/Icon/Homeicon/Adviceicons/Salat";
 export const AdviceData = [
   {
     icon: <Book />,
