@@ -109,15 +109,17 @@ export const Header = () => {
             }}
           >
             <PersonIcon />
-            <Button
-              color="inherit"
-              sx={{
-                fontWeight: "540",
-                fontSize: "16px",
-              }}
-            >
-              Нэвтрэх
-            </Button>
+            <Link href={"/login"}>
+              <Button
+                color="inherit"
+                sx={{
+                  fontWeight: "540",
+                  fontSize: "16px",
+                }}
+              >
+                Нэвтрэх
+              </Button>
+            </Link>
           </Stack>
         </Grid>
       </Grid>

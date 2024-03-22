@@ -38,7 +38,7 @@ export const Footer = () => {
           </Link>
           <Typography borderBottom={"1px solid white"}>Холбоо барих</Typography>
           <Typography borderBottom={"1px solid white"}>Хоолны цэс</Typography>
-          <Link href={"/information4"}>
+          <Link href={"/footerinformation4"}>
             <Typography borderBottom={"1px solid white"}>
               Үйлчилгээний нөхцөл
             </Typography>
@@ -49,7 +49,7 @@ export const Footer = () => {
             </Typography>
           </Link>
 
-          <Link href={"/information6"}>
+          <Link href={"/footerinformation6"}>
             <Typography borderBottom={"1px solid white"}>
               Нууцлалын бодлого
             </Typography>
