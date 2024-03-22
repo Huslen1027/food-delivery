@@ -30,7 +30,7 @@ export const Login = () => {
     >
       <Stack
         width={"448px"}
-        height={"600px"}
+        height={"500px"}
         direction={"column"}
         padding={"32px"}
         gap={"48px"}
