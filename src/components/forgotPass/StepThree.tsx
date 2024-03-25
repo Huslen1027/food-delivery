@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 
-export const StepOne = () => {
+export const StepThree = () => {
   return <Grid></Grid>;
 };
-export default StepOne;
+export default StepThree;

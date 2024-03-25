@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 
-export const forgotpass = () => {
+export const Page = () => {
   return <Grid></Grid>;
 };
+export default Page;

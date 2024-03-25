@@ -9,7 +9,7 @@ export const AdviceData = [
   },
   {
     icon: <Clock />,
-    text1: "Шуурхай хүргэлтv",
+    text1: "Шуурхай хүргэлт",
     text2: "Захиалга бэлтгэлийн явцыг хянах",
   },
   {

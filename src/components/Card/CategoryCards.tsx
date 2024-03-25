@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import { Container, Stack } from "@mui/system";
 import Link from "next/link";
 import MediaCard from "./MediaCard";

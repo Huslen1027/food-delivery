@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import * as React from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import Link from "next/link";
 export const Login = () => {
   const [showPassword, setShowPassword] = React.useState(false);
 
@@ -24,16 +25,16 @@ export const Login = () => {
       direction={"row"}
       px={"32px"}
       width={"full"}
-      height={"700px"}
+      height={"800px"}
       justifyContent={"center"}
-      alignItems={"center"}
+      paddingTop={"50px"}
     >
       <Stack
         width={"448px"}
         height={"500px"}
         direction={"column"}
         padding={"32px"}
-        gap={"48px"}
+        gap={"38px"}
       >
         <Typography fontSize={"28px"} textAlign={"center"}>
           Нэвтрэх
@@ -95,15 +96,17 @@ export const Login = () => {
             Нэвтрэх
           </Button>
           <Button sx={{ width: "384px", padding: "8px 16px" }}>Эсвэл</Button>
-          <Button
-            sx={{
-              width: "384px",
-              padding: "8px 16px",
-              border: "1px solid #18BA51",
-            }}
-          >
-            Бүртгүүлэх
-          </Button>
+          <Link href={"/signup"}>
+            <Button
+              sx={{
+                width: "384px",
+                padding: "8px 16px",
+                border: "1px solid #18BA51",
+              }}
+            >
+              Бүртгүүлэх
+            </Button>
+          </Link>
         </Stack>
       </Stack>
     </Stack>
