@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
 
-export const CardThree = () => {
+export const Foodlist = () => {
   return <Grid></Grid>;
 };

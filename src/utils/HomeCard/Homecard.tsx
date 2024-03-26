@@ -1,90 +1,99 @@
-export const food = [
+export const foods = [
   {
     title: "Өглөөний цай",
-    image: "/egg.png",
+    image: "/CategoryImage1",
     price: 16800,
     discount: 12000,
   },
   {
     title: "Зайрмаг",
-    image: "",
+    image: "/CategoryImage1",
     price: 6800,
     discount: 4800,
   },
   {
     title: "Өглөөний цай",
-    image: "",
+    image: "/CategoryImage1",
     price: 26800,
     discount: 24800,
   },
   {
     title: "Өглөөний цай",
-    image: "",
+    image: "/CategoryImage1",
     price: 26800,
     discount: 24800,
   },
   {
     title: "Main Pizza ",
-    image: "",
+    image: "/CategoryImage2",
     price: 34800,
+    discount: 24800,
   },
   {
     title: "Food tart",
-    image: "",
+    image: "/CategoryImage2",
     price: 22800,
+    discount: 24800,
   },
   {
     title: "Өглөөний хоол",
-    image: "",
+    image: "/CategoryImage2",
     price: 14800,
+    discount: 24800,
   },
   {
     title: "Зутан шөл",
-    image: "",
+    image: "/CategoryImage2",
     price: 17800,
+    discount: 24800,
   },
   {
     title: "Чихэрлэг тахиа",
-    image: "",
+    image: "/CategoryImage3",
     price: 24800,
+    discount: 24800,
   },
   {
     title: "Lunch",
-    image: "",
+    image: "/CategoryImage3",
     price: 24800,
+    discount: 24800,
   },
   {
     title: "Сэндвич",
-    image: "",
+    image: "/CategoryImage3",
     price: 14800,
+    discount: 24800,
   },
   {
     title: "Apple pie",
-    image: "",
+    image: "/CategoryImage3",
     price: 34800,
+    discount: 24800,
   },
   {
     title: "Торт",
-    image: "",
+    image: "/CategoryImage4",
     price: 54800,
+    discount: 24800,
   },
   {
     title: "Oreo shake",
-    image: "",
+    image: "/CategoryImage4",
     price: 14800,
+    discount: 24800,
   },
   {
     title: "Chocolate ",
-    image: "",
+    image: "/CategoryImage4",
     price: 14800,
+    discount: 24800,
   },
   {
     title: "Yoghurt",
-    image: "",
+    image: "/CategoryImage4",
     price: 14800,
+    discount: 24800,
   },
 ];
-export const mainCourse = [];
-export const saladSnack = [];
-export const desert = [];
-export default food;
+export default foods;

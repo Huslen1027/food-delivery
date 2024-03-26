@@ -51,7 +51,7 @@ export const Header = () => {
             ХООЛНЫ ЦЭС
           </Button>
         </Link>
-        <Link href={""}>
+        <Link href={"/information/footerinformation5"}>
           <Button
             sx={{
               color: "#000",

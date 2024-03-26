@@ -36,6 +36,7 @@ export const Footer = () => {
           <Link href={"/"}>
             <Typography
               sx={{
+                textUnderlineOffset: "0",
                 color: "#FFF",
               }}
               borderBottom={"1px solid #FFF"}
