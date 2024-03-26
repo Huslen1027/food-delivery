@@ -30,8 +30,8 @@ export const Header = () => {
         </IconButton>
         <Link href={"/"}>
           <Button
-            color="inherit"
             sx={{
+              color: "#000",
               fontWeight: "540",
               fontSize: "16px",
             }}
@@ -42,8 +42,8 @@ export const Header = () => {
         <Link href={""}>
           {" "}
           <Button
-            color="inherit"
             sx={{
+              color: "#000",
               fontWeight: "540",
               fontSize: "16px",
             }}
@@ -53,8 +53,8 @@ export const Header = () => {
         </Link>
         <Link href={""}>
           <Button
-            color="inherit"
             sx={{
+              color: "#000",
               fontWeight: "540",
               fontSize: "16px",
             }}
@@ -91,8 +91,8 @@ export const Header = () => {
           >
             <ShoppingIcon />
             <Button
-              color="inherit"
               sx={{
+                color: "#000",
                 fontWeight: "540",
                 fontSize: "16px",
               }}
@@ -111,8 +111,8 @@ export const Header = () => {
             <PersonIcon />
             <Link href={"/login"}>
               <Button
-                color="inherit"
                 sx={{
+                  color: "#000",
                   fontWeight: "540",
                   fontSize: "16px",
                 }}

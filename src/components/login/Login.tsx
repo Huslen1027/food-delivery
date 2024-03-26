@@ -88,17 +88,24 @@ export const Login = () => {
         <Stack direction="column" spacing={4}>
           <Button
             sx={{
+              backgroundColor: "#EEEFF2",
+              color: "#000",
               width: "384px",
               padding: "8px 16px",
+              ":hover": "#18BA51",
               border: "2px solid #EEEFF2",
             }}
           >
             Нэвтрэх
           </Button>
-          <Button sx={{ width: "384px", padding: "8px 16px" }}>Эсвэл</Button>
+          <Button sx={{ color: "#000", width: "384px", padding: "8px 16px" }}>
+            Эсвэл
+          </Button>
           <Link href={"/signup"}>
             <Button
               sx={{
+                color: "#000",
+
                 width: "384px",
                 padding: "8px 16px",
                 border: "1px solid #18BA51",

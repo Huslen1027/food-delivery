@@ -34,23 +34,59 @@ export const Footer = () => {
         </Stack>
         <Stack display="flex" direction={"row"} gap={"70px"} color={"white"}>
           <Link href={"/"}>
-            <Typography borderBottom={"1px solid white"}>Нүүр</Typography>
+            <Typography
+              sx={{
+                color: "#FFF",
+              }}
+              borderBottom={"1px solid #FFF"}
+            >
+              Нүүр
+            </Typography>
           </Link>
-          <Typography borderBottom={"1px solid white"}>Холбоо барих</Typography>
-          <Typography borderBottom={"1px solid white"}>Хоолны цэс</Typography>
+          <Typography
+            sx={{
+              color: "#FFF",
+            }}
+            borderBottom={"1px solid white"}
+          >
+            Холбоо барих
+          </Typography>
+          <Typography
+            sx={{
+              color: "#FFF",
+            }}
+            borderBottom={"1px solid white"}
+          >
+            Хоолны цэс
+          </Typography>
           <Link href={"/information/footerinformation4"}>
-            <Typography borderBottom={"1px solid white"}>
+            <Typography
+              sx={{
+                color: "#FFF",
+              }}
+              borderBottom={"1px solid white"}
+            >
               Үйлчилгээний нөхцөл
             </Typography>
           </Link>
           <Link href={"/information/footerinformation5"}>
-            <Typography borderBottom={"1px solid white"}>
+            <Typography
+              sx={{
+                color: "#FFF",
+              }}
+              borderBottom={"1px solid white"}
+            >
               Хүргэлтийн бүс
             </Typography>
           </Link>
 
           <Link href={"/information/footerinformation6"}>
-            <Typography borderBottom={"1px solid white"}>
+            <Typography
+              sx={{
+                color: "#FFF",
+              }}
+              borderBottom={"1px solid white"}
+            >
               Нууцлалын бодлого
             </Typography>
           </Link>

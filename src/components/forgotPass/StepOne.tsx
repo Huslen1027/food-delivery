@@ -1,12 +1,18 @@
-import { FormControl, Stack, TextField, Typography } from "@mui/material";
-import Button from "@mui/material/Button";
+import {
+  FormControl,
+  Stack,
+  TextField,
+  Typography,
+  Button,
+} from "@mui/material";
+
+const btnStyle = {
+  backgroundColor: "#18BA51",
+  padding: "5px",
+  color: "#fff",
+};
 
 export const StepOne = () => {
-  const btnStyle = {
-    bgcolor: "#18BA51",
-    padding: "5px",
-    color: "#fff",
-  };
   return (
     <Stack
       sx={{
@@ -42,7 +48,9 @@ export const StepOne = () => {
             />
           </FormControl>
         </Stack>
-        <Button sx={btnStyle}>{"Үргэлжлүүлэх"}</Button>
+        <Button sx={btnStyle} variant="contained">
+          {"Үргэлжлүүлэх"}
+        </Button>
       </Stack>
     </Stack>
   );

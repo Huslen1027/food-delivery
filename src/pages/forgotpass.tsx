@@ -1,13 +1,5 @@
-import { Grid } from "@mui/material";
-
-// import { useState } from "react";
-import StepThree from "@/components/forgotPass/StepThree";
+import StepOne from "@/components/forgotPass/StepOne";
 export const Page = () => {
-  // const [showload, setshowload] = useState("signup");
-  return (
-    <Grid>
-      <StepThree />
-    </Grid>
-  );
+  return <StepOne></StepOne>;
 };
 export default Page;
