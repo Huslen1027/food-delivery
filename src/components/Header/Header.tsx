@@ -13,7 +13,7 @@ export const Header = () => {
     <Grid
       width="full"
       component="div"
-      px="200px"
+      px="90px"
       pt={"10px"}
       display="flex"
       justifyContent={"space-between"}

@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { Homee } from "@/components/HomeComp/Home";
-
+import { Cards } from "@/components/HomeComp/Cards/Cards";
 import { Advise } from "@/components/HomeComp/Advice";
 
 export const Home = () => {
@@ -9,11 +9,11 @@ export const Home = () => {
       display={"flex"}
       gap={"50px"}
       flexDirection={"column"}
-      height={"3486px"}
+      height={"2686px"}
     >
       <Homee />
       <Advise />
-      sda
+      <Cards />
     </Grid>
   );
 };
