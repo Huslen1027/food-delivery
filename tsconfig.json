@@ -20,7 +20,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/pages/information/information14tsx"
+    "src/pages/information/information14tsx",
+    "src/utils/HomeCard/Homecard.jsx"
   ],
   "exclude": ["node_modules"]
 }

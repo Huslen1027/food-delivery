@@ -1,69 +1,49 @@
-import { Stack, Typography } from "@mui/material";
+import { Container, Divider, Stack, Typography, useTheme } from "@mui/material";
 import Image from "next/image";
 export const Homee = () => {
+  const theme = useTheme();
   return (
     <Stack
-      width="full"
-      component="div"
-      height="788px"
-      direction={"row"}
-      alignItems={"center"}
-      justifyContent={"space-around"}
-      px={"200px"}
-      sx={{
-        backgroundColor: "#18BA51",
-        backgroundImage: "url(/backImage.png)",
-      }}
+      bgcolor={theme.palette.primary.main}
+      sx={{ backgroundImage: "url(/backImage.png)" }}
+      marginBottom={"122px"}
     >
-      <Stack
-        display={"flex"}
-        gap={"20px"}
-        sx={{
-          direction: "column",
-        }}
-      >
-        <Typography
-          width={"360px"}
-          fontSize={"55px"}
-          lineHeight={"90%"}
-          fontWeight={"510"}
-          sx={{
-            color: "#FFFFFF",
-          }}
-        >
-          Pinecone Food delivery
-        </Typography>
+      <Container maxWidth={"lg"}>
         <Stack
-          height={"1px"}
-          sx={{
-            backgroundColor: "white",
-          }}
-        ></Stack>
-        <Typography
-          width={"360px"}
-          sx={{
-            color: "#FFFFFF",
-          }}
-          fontSize={"22px"}
+          height={"788px"}
+          direction={"row"}
+          alignItems={"center"}
+          position={"relative"}
+          gap={"180px"}
         >
-          Horem ipsum dolor sit amet, consectetur adipiscing elit.
-        </Typography>
-      </Stack>
-      <Stack display={"flex"} position={"relative"}>
-        <Typography zIndex={"1"} width={543} height={538}>
-          <Image alt="" src="/tsuiwan.png" width={443} height={438} />
-        </Typography>
-        <Typography
-          zIndex={"10"}
-          position={"absolute"}
-          top={"120px"}
-          left={"280px"}
-          width={543}
-          height={538}
-        >
-          <Image alt="" src="/katsudon.png" width={313} height={313} />
-        </Typography>
-      </Stack>
+          <Stack
+            width={"370px"}
+            gap={"23px"}
+            color={theme.palette.primary.light}
+          >
+            <Typography
+              color={"white"}
+              fontSize={"55px"}
+              fontWeight={"600"}
+              lineHeight={1}
+            >
+              Pinecone Food delivery
+            </Typography>
+            <Divider
+              component="div"
+              sx={{ border: "1px solid white", width: "100%" }}
+            />
+            <Typography color={"white"} fontSize={"22px"} fontWeight={"500"}>
+              Horem ipsum dolor sit amet, consectetur adipiscing elit.
+            </Typography>
+          </Stack>
+          <Image src="/tsuiwan.png" width={443} height={438} alt="" />
+
+          <Stack marginLeft={"840px"} marginTop={"120px"} position={"absolute"}>
+            <Image src="/katsudon.png" width={313} height={313} alt="" />
+          </Stack>
+        </Stack>
+      </Container>
     </Stack>
   );
 };

@@ -1,11 +1,11 @@
 import { Grid, Stack, Typography } from "@mui/material";
 import { Adresses } from "@/utils/footer/Adresses";
-import { Star } from "@/Icon/FooterIcon/Star";
+import { Star } from "@/components/Icon/FooterIcon/Star";
 import dynamic from "next/dynamic";
 const Map = dynamic(() => import("@/components/GoogleMap"), { ssr: false });
 const footerinformation5 = () => {
   return (
-    <Stack width={"full"} height={"1000px"} gap={"50px"} direction={"column"}>
+    <Stack width={"full"} height={"1300px"} gap={"50px"} direction={"column"}>
       <Stack marginTop={"50px"} justifyContent={"center"} alignItems={"center"}>
         <Map />
       </Stack>

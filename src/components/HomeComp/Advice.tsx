@@ -3,11 +3,13 @@ import { AdviceData } from "@/utils/advice/Advise";
 export const Advise = () => {
   return (
     <Grid
+      maxWidth={"lg"}
+      margin={"auto"}
       display={"flex"}
-      justifyContent={"center"}
       alignContent={"center"}
       border={"black"}
-      gap={"47px"}
+      justifyContent={"space-between"}
+      gap={"20px"}
     >
       {AdviceData.map((e, index) => (
         <Stack

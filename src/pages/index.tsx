@@ -5,12 +5,7 @@ import { Advise } from "@/components/HomeComp/Advice";
 
 export const Home = () => {
   return (
-    <Grid
-      display={"flex"}
-      gap={"50px"}
-      flexDirection={"column"}
-      height={"2686px"}
-    >
+    <Grid display={"flex"} gap={"50px"} flexDirection={"column"}>
       <Homee />
       <Advise />
       <Cards />

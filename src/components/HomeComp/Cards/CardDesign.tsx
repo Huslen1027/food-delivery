@@ -1,27 +1,41 @@
 import { Stack, Typography } from "@mui/material";
-
-export const CardDesign = () => {
+import Image from "next/image";
+type dataType = {
+  title: string;
+  category: string;
+  image: string;
+  price: number;
+  discount: number;
+};
+const CardDesign = ({ data }: { data: dataType[] }) => {
+  const datas = data.slice(0, 4);
+  console.log(data);
   return (
-    <Stack
-      width={"282px"}
-      height={"256px"}
-      display={"flex"}
-      direction={"column"}
-      gap={"14px"}
-    >
-      <Stack width={"282px"} height={"186px"}>
-        <Stack width={"282px"} height={"186px"} borderRadius={"16px"}></Stack>
-        <Stack></Stack>
-      </Stack>
-      <Stack
-        display={"flex"}
-        direction={"column"}
-        gap={"2px"}
-        alignItems={"start"}
-      >
-        <Typography>Өглөөний хоол</Typography>
-        <Stack direction={"row"} alignItems={"start"} gap={"16px"}></Stack>
+    <Stack>
+      <Stack direction={"row"} justifyContent={"space-between"}>
+        {datas.map((e, index) => {
+          return (
+            <Stack key={index} gap={"14px"}>
+              <Image src={e.image} width={282} height={186} alt="" />
+              <Stack px={1.5}>
+                <Typography fontSize={"18px"} fontWeight={"600"}>
+                  {e.title}
+                </Typography>
+                <Stack direction={"row"} gap={1}>
+                  <Typography
+                    fontSize={"18px"}
+                    fontWeight={"600"}
+                    color={"#18BA51"}
+                  >
+                    {e.price}₮
+                  </Typography>
+                </Stack>
+              </Stack>
+            </Stack>
+          );
+        })}
       </Stack>
     </Stack>
   );
 };
+export default CardDesign;

@@ -1,5 +1,5 @@
 import { Stack, Typography } from "@mui/material";
-import { Star } from "@/Icon/FooterIcon/Star";
+import { Star } from "@/components/Icon/FooterIcon/Star";
 export const footerinformation6 = () => {
   return (
     <Stack

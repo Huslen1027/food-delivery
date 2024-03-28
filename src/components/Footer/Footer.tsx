@@ -1,8 +1,8 @@
 import { Grid, Stack, Typography } from "@mui/material";
-import { PineLogo } from "../../Icon/FooterIcon/PineLogo";
-import { FaceBookLogo } from "../../Icon/FooterIcon/Facebooklogo";
-import { TwitterLogo } from "../../Icon/FooterIcon/Twitterlogo";
-import { InstragramLogo } from "../../Icon/FooterIcon/Instagramlogo";
+import { PineLogo } from "../Icon/FooterIcon/PineLogo";
+import { FaceBookLogo } from "../Icon/FooterIcon/Facebooklogo";
+import { TwitterLogo } from "../Icon/FooterIcon/Twitterlogo";
+import { InstragramLogo } from "../Icon/FooterIcon/Instagramlogo";
 import Link from "next/link";
 export const Footer = () => {
   return (
@@ -17,14 +17,14 @@ export const Footer = () => {
       }}
     >
       <Stack
+        maxWidth={"1440px"}
+        margin={"auto"}
         display={"flex"}
         direction={"column"}
         justifyContent={"center"}
         alignItems={"center"}
-        width={"1200px"}
+        width={"full"}
         gap={"40px"}
-        fontFamily={"nohi"}
-        boxShadow={"sda"}
       >
         <Stack direction={"row"} gap={"10px"}>
           <PineLogo />

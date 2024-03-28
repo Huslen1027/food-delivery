@@ -1,22 +1,23 @@
 import * as React from "react";
-import Searchicon from "../../Icon/HeaderIcon/Searchicon";
+import Searchicon from "../Icon/HeaderIcon/Searchicon";
 import IconButton from "@mui/material/IconButton";
 import { Button, InputBase, Stack } from "@mui/material";
-import Pineconelogo from "../../Icon/HeaderIcon/Pineconelogo";
+import Pineconelogo from "../Icon/HeaderIcon/Pineconelogo";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import PersonIcon from "../../Icon/HeaderIcon/PersonIcon";
-import ShoppingIcon from "../../Icon/HeaderIcon/ShoppingIcon";
+import PersonIcon from "../Icon/HeaderIcon/PersonIcon";
+import ShoppingIcon from "../Icon/HeaderIcon/ShoppingIcon";
 import Link from "next/link";
 export const Header = () => {
   return (
     <Grid
       width="full"
       component="div"
-      px="90px"
       pt={"10px"}
       display="flex"
       justifyContent={"space-between"}
+      maxWidth={"lg"}
+      margin={"auto"}
     >
       <Grid component="div" display="flex" gap="20px">
         <IconButton
@@ -24,7 +25,7 @@ export const Header = () => {
           edge="start"
           color="inherit"
           aria-label="open drawer"
-          sx={{ mr: 2 }}
+          sx={{ mr: 2, justifyContent: "center", alignItems: "center" }}
         >
           <Pineconelogo />
         </IconButton>
@@ -40,7 +41,6 @@ export const Header = () => {
           </Button>
         </Link>
         <Link href={""}>
-          {" "}
           <Button
             sx={{
               color: "#000",

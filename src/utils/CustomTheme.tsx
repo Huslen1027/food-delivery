@@ -1,6 +1,6 @@
 import { ThemeProvider, createTheme } from "@mui/material";
 import { ReactNode } from "react";
-const black = "#ffffff";
+
 const theme = createTheme({
   breakpoints: {
     values: {
@@ -13,13 +13,10 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: black,
+      main: "#18BA51",
       dark: "#000000",
       light: "#FFFFFF",
     },
-  },
-  typography: {
-    fontSize: 16,
   },
 });
 export const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
