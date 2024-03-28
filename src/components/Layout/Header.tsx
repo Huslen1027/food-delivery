@@ -7,8 +7,9 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import PersonIcon from "../Icon/HeaderIcon/PersonIcon";
 import ShoppingIcon from "../Icon/HeaderIcon/ShoppingIcon";
-import Link from "next/link";
+import { useRouter } from "next/router";
 export const Header = () => {
+  const router = useRouter();
   return (
     <Grid
       width="full"
@@ -29,39 +30,45 @@ export const Header = () => {
         >
           <Pineconelogo />
         </IconButton>
-        <Link href={"/"}>
-          <Button
-            sx={{
-              color: "#000",
-              fontWeight: "540",
-              fontSize: "16px",
-            }}
-          >
-            НҮҮР
-          </Button>
-        </Link>
-        <Link href={""}>
-          <Button
-            sx={{
-              color: "#000",
-              fontWeight: "540",
-              fontSize: "16px",
-            }}
-          >
-            ХООЛНЫ ЦЭС
-          </Button>
-        </Link>
-        <Link href={"/information/footerinformation5"}>
-          <Button
-            sx={{
-              color: "#000",
-              fontWeight: "540",
-              fontSize: "16px",
-            }}
-          >
-            ХҮРГЭЛТИЙН БҮС
-          </Button>
-        </Link>
+
+        <Button
+          onClick={() => {
+            router.push("/");
+          }}
+          sx={{
+            color: "#000",
+            fontWeight: "540",
+            fontSize: "16px",
+          }}
+        >
+          НҮҮР
+        </Button>
+
+        <Button
+          onClick={() => {
+            router.push("/menu");
+          }}
+          sx={{
+            color: "#000",
+            fontWeight: "540",
+            fontSize: "16px",
+          }}
+        >
+          ХООЛНЫ ЦЭС
+        </Button>
+
+        <Button
+          onClick={() => {
+            router.push("/information/footerinformation5");
+          }}
+          sx={{
+            color: "#000",
+            fontWeight: "540",
+            fontSize: "16px",
+          }}
+        >
+          ХҮРГЭЛТИЙН БҮС
+        </Button>
       </Grid>
       <Grid component="div" display="flex" gap="40px" alignItems="center">
         <Paper
@@ -109,17 +116,19 @@ export const Header = () => {
             }}
           >
             <PersonIcon />
-            <Link href={"/login"}>
-              <Button
-                sx={{
-                  color: "#000",
-                  fontWeight: "540",
-                  fontSize: "16px",
-                }}
-              >
-                Нэвтрэх
-              </Button>
-            </Link>
+
+            <Button
+              onClick={() => {
+                router.push("/login");
+              }}
+              sx={{
+                color: "#000",
+                fontWeight: "540",
+                fontSize: "16px",
+              }}
+            >
+              Нэвтрэх
+            </Button>
           </Stack>
         </Grid>
       </Grid>

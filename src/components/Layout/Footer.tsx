@@ -3,8 +3,10 @@ import { PineLogo } from "../Icon/FooterIcon/PineLogo";
 import { FaceBookLogo } from "../Icon/FooterIcon/Facebooklogo";
 import { TwitterLogo } from "../Icon/FooterIcon/Twitterlogo";
 import { InstragramLogo } from "../Icon/FooterIcon/Instagramlogo";
-import Link from "next/link";
+import { useRouter } from "next/router";
+
 export const Footer = () => {
+  const router = useRouter();
   return (
     <Grid
       display={"flex"}
@@ -33,17 +35,19 @@ export const Footer = () => {
           </Typography>
         </Stack>
         <Stack display="flex" direction={"row"} gap={"70px"} color={"white"}>
-          <Link href={"/"}>
-            <Typography
-              sx={{
-                textUnderlineOffset: "0",
-                color: "#FFF",
-              }}
-              borderBottom={"1px solid #FFF"}
-            >
-              Нүүр
-            </Typography>
-          </Link>
+          <Typography
+            onClick={() => {
+              router.push("/");
+            }}
+            sx={{
+              textUnderlineOffset: "0",
+              color: "#FFF",
+            }}
+            borderBottom={"1px solid #FFF"}
+          >
+            Нүүр
+          </Typography>
+
           <Typography
             sx={{
               color: "#FFF",
@@ -53,6 +57,9 @@ export const Footer = () => {
             Холбоо барих
           </Typography>
           <Typography
+            onClick={() => {
+              router.push("menu");
+            }}
             sx={{
               color: "#FFF",
             }}
@@ -60,37 +67,42 @@ export const Footer = () => {
           >
             Хоолны цэс
           </Typography>
-          <Link href={"/information/footerinformation4"}>
-            <Typography
-              sx={{
-                color: "#FFF",
-              }}
-              borderBottom={"1px solid white"}
-            >
-              Үйлчилгээний нөхцөл
-            </Typography>
-          </Link>
-          <Link href={"/information/footerinformation5"}>
-            <Typography
-              sx={{
-                color: "#FFF",
-              }}
-              borderBottom={"1px solid white"}
-            >
-              Хүргэлтийн бүс
-            </Typography>
-          </Link>
 
-          <Link href={"/information/footerinformation6"}>
-            <Typography
-              sx={{
-                color: "#FFF",
-              }}
-              borderBottom={"1px solid white"}
-            >
-              Нууцлалын бодлого
-            </Typography>
-          </Link>
+          <Typography
+            onClick={() => {
+              router.push("/information/footerinformation4");
+            }}
+            sx={{
+              color: "#FFF",
+            }}
+            borderBottom={"1px solid white"}
+          >
+            Үйлчилгээний нөхцөл
+          </Typography>
+
+          <Typography
+            onClick={() => {
+              router.push("/information/footerinformation5");
+            }}
+            sx={{
+              color: "#FFF",
+            }}
+            borderBottom={"1px solid white"}
+          >
+            Хүргэлтийн бүс
+          </Typography>
+
+          <Typography
+            onClick={() => {
+              router.push("/information/footerinformation6");
+            }}
+            sx={{
+              color: "#FFF",
+            }}
+            borderBottom={"1px solid white"}
+          >
+            Нууцлалын бодлого
+          </Typography>
         </Stack>
         <Stack display={"flex"} direction={"row"} gap={"18px"}>
           <FaceBookLogo />

@@ -1,8 +1,8 @@
-import { Stack, Typography } from "@mui/material";
-import Image from "next/image";
+import { CardMedia, Stack, Typography } from "@mui/material";
+
 type dataType = {
-  title: string;
   category: string;
+  title: string;
   image: string;
   price: number;
   discount: number;
@@ -16,7 +16,13 @@ const CardDesign = ({ data }: { data: dataType[] }) => {
         {datas.map((e, index) => {
           return (
             <Stack key={index} gap={"14px"}>
-              <Image src={e.image} width={282} height={186} alt="" />
+              <CardMedia
+                component="img"
+                image={e.image}
+                width={282}
+                height={186}
+                alt=""
+              />
               <Stack px={1.5}>
                 <Typography fontSize={"18px"} fontWeight={"600"}>
                   {e.title}
