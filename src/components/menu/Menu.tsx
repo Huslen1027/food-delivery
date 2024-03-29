@@ -1,49 +1,94 @@
-import { Button, Container, Stack, Typography } from "@mui/material";
-import React from "react";
-import { food } from "@/utils/HomeCard";
-import dummyCategory from "@/utils/menu/Menu";
-import CardDesign from "../HomeComp/Cards/CardDesign";
-
-export const Menu = () => {
-  const [menu, setMenu] = React.useState<string>("Breakfast");
-  const handleSubmit = (item: string) => {
-    setMenu(item);
-  };
+import { Breakfast, Dessert, MainCourse, Sidedish } from "@/components/menu";
+import { Button, Container, Stack } from "@mui/material";
+import { useState } from "react";
+const Home = () => {
+  const [show, setShow] = useState(0);
   return (
-    <Container>
-      <Stack
-        my={"32px"}
-        direction={"row"}
-        justifyContent={"center"}
-        gap={"26px"}
-      >
-        {dummyCategory.map((category) => (
-          <Button
-            onClick={() => handleSubmit(category)}
-            key={category}
-            disableRipple
-            variant="contained"
-          >
-            <Typography
-              fontSize={"16px"}
-              fontWeight={500}
-              sx={{ textTransform: "none" }}
+    <>
+      <main>
+        <Container maxWidth="lg">
+          <Stack gap={"54px"}>
+            <Stack
+              py={4}
+              gap={"28px"}
+              direction={"row"}
+              justifyContent={"space-between"}
             >
-              {category}
-            </Typography>
-          </Button>
-        ))}
-      </Stack>
-      <Stack mt={"54px"} mb={"80px"} gap={"60px"}>
-        <Stack gap={3} direction={"row"} flexWrap={"wrap"}>
-          {food
-            .filter((item) => item.category == menu)
-            .map((data, index) => (
-              <CardDesign key={index} data={data} />
-            ))}
-        </Stack>
-      </Stack>
-    </Container>
+              <Button
+                sx={{
+                  width: "280px",
+                  alignItems: "center",
+                  border: "1px solid #D6D8DB",
+                  borderRadius: "8px",
+                  px: "16px",
+                  py: "8px",
+                  color: "black",
+                }}
+                onClick={() => {
+                  setShow(0);
+                }}
+              >
+                Breakfast
+              </Button>
+              <Button
+                sx={{
+                  width: "280px",
+                  alignItems: "center",
+                  border: "1px solid #D6D8DB",
+                  borderRadius: "8px",
+                  px: "16px",
+                  py: "8px",
+                  color: "black",
+                }}
+                onClick={() => {
+                  setShow(1);
+                }}
+              >
+                Sidedish
+              </Button>
+              <Button
+                sx={{
+                  width: "280px",
+                  alignItems: "center",
+                  border: "1px solid #D6D8DB",
+                  borderRadius: "8px",
+                  px: "16px",
+                  py: "8px",
+                  color: "black",
+                }}
+                onClick={() => {
+                  setShow(2);
+                }}
+              >
+                Main Course
+              </Button>
+              <Button
+                sx={{
+                  width: "280px",
+                  alignItems: "center",
+                  border: "1px solid #D6D8DB",
+                  borderRadius: "8px",
+                  px: "16px",
+                  py: "8px",
+                  color: "black",
+                }}
+                onClick={() => {
+                  setShow(3);
+                }}
+              >
+                Dessert
+              </Button>
+            </Stack>
+            <Stack>
+              {show == 0 && <Breakfast />}
+              {show == 1 && <Sidedish />}
+              {show == 2 && <MainCourse />}
+              {show == 3 && <Dessert />}
+            </Stack>
+          </Stack>
+        </Container>
+      </main>
+    </>
   );
 };
-export default Menu;
+export default Home;

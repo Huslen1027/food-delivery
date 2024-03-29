@@ -1,11 +1,14 @@
 import { CardMedia, Stack, Typography } from "@mui/material";
 
 type dataType = {
+  id: number;
   category: string;
   title: string;
   image: string;
   price: number;
   discount: number;
+  ingredients: string[];
+  stock: number;
 };
 const CardDesign = ({ data }: { data: dataType[] }) => {
   const datas = data.slice(0, 4);

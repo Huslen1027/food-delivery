@@ -10,7 +10,7 @@ export const footerinformation4 = () => {
       maxWidth={"lg"}
       margin={"auto"}
     >
-      <Stack direction={"row"} gap={"10px"}>
+      <Stack direction={"row"} gap={"10px"} alignItems={"center"}>
         <Star />
         <Typography fontSize={"22px"} fontWeight={"500"}>
           Үйлчилгээний нөхцөл

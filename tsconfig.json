@@ -21,7 +21,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/pages/information/information14tsx",
-    "src/utils/HomeCard/Homecard.jsx"
+    "src/utils/HomeCard/Food.jsx"
   ],
   "exclude": ["node_modules"]
 }

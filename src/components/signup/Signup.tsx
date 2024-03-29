@@ -91,7 +91,8 @@ export const Signup = () => {
                 }
               />
             </FormControl>
-
+          </FormGroup>
+          <FormGroup>
             <FormControl sx={{ mt: 1, width: "100%" }} variant="outlined">
               <Typography fontSize={"14px"}>Нууц үг</Typography>
               <OutlinedInput
