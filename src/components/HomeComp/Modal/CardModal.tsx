@@ -29,7 +29,7 @@ type dataType = {
   ingredients: string[];
   stock: number;
 };
-export const CardModal = ({ data }: { data: dataType }) => {
+export const CardModal = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -37,9 +37,7 @@ export const CardModal = ({ data }: { data: dataType }) => {
   return (
     <div>
       <Box>
-        <Button onClick={handleOpen}>
-          <CardDesign data={data} />
-        </Button>
+        <Button onClick={handleOpen}></Button>
       </Box>
 
       <Modal
@@ -49,17 +47,13 @@ export const CardModal = ({ data }: { data: dataType }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <CardMedia image={data.image} />
           <Stack
             display={"flex"}
             direction={"column"}
             alignItems={"start"}
             gap={"32px"}
           >
-            <Stack display={"flex"} direction={"row"}>
-              <Typography>{data.title}</Typography>
-              <Typography>{data.price}</Typography>
-            </Stack>
+            <Stack display={"flex"} direction={"row"}></Stack>
           </Stack>
         </Box>
       </Modal>
