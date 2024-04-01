@@ -1,14 +1,15 @@
 import { Grid } from "@mui/material";
-import { Homee } from "@/components/HomeComp/Home";
-import { Cards } from "@/components/HomeComp/Cards/Cards";
-import { Advise } from "@/components/HomeComp/Advice";
+import { Homee } from "@/components/Home/Home";
 
 export const Home = () => {
   return (
-    <Grid display={"flex"} gap={"50px"} flexDirection={"column"}>
+    <Grid
+      display={"flex"}
+      gap={"50px"}
+      flexDirection={"column"}
+      height={"3100px"}
+    >
       <Homee />
-      <Advise />
-      <Cards />
     </Grid>
   );
 };

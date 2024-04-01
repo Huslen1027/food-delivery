@@ -10,6 +10,7 @@ export const Advise = () => {
       border={"black"}
       justifyContent={"space-between"}
       gap={"20px"}
+      marginTop={"80px"}
     >
       {AdviceData.map((e, index) => (
         <Stack

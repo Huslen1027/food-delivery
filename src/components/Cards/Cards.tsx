@@ -3,7 +3,6 @@ import { Star } from "@/components/Icon/FooterIcon/Star";
 import { food, Category } from "@/utils/HomeCard";
 import Link from "next/link";
 import Image from "next/image";
-import CardDesign from "./CardDesign";
 export const Cards = () => {
   const filterFoods = food.filter((item) => item.discount > 0);
   const saleFoods = filterFoods.slice(0, 4);
@@ -113,7 +112,6 @@ export const Cards = () => {
                   </Typography>
                 </Link>
               </Stack>
-              <CardDesign data={e} />
             </Stack>
           );
         })}
