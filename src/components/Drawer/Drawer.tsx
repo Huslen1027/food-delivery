@@ -1,7 +1,7 @@
 import { Button, Divider, Drawer, Stack, Typography } from "@mui/material";
 import * as React from "react";
 import { DrawerCard } from "../Cards";
-import { useCartItems } from "../Context/FoodChart";
+import { useCartItems } from "../Context/CartContext";
 
 export const BasketDrawer = () => {
   const [open, setOpen] = React.useState(false);
@@ -51,7 +51,7 @@ export const BasketDrawer = () => {
         justifyContent={"space-between"}
       >
         <Stack>
-          <Typography>Нийт төлөх дүн</Typography>
+          <Typography color={"#5E6166"}>Нийт төлөх дүн</Typography>
           <Typography>{sum}</Typography>
         </Stack>
         <Button>Захиалах</Button>
@@ -61,9 +61,7 @@ export const BasketDrawer = () => {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>
-        <CartBadge />
-      </Button>
+      <Button onClick={toggleDrawer(true)}></Button>
       <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>

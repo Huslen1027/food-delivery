@@ -1,94 +1,68 @@
-import { Breakfast, Dessert, MainCourse, Sidedish } from "@/components/menu";
-import { Button, Container, Stack } from "@mui/material";
+import { Button, Container, Stack, Typography } from "@mui/material";
+import { CardModal } from "../Cards/CardModal";
 import { useState } from "react";
-const Home = () => {
-  const [show, setShow] = useState(0);
+import { useFoodData } from "../Context/FoodContext";
+export const Menu = () => {
+  const { foodData } = useFoodData();
+  const [menu, setMenu] = useState("Breakfast");
+
+  const buttonStyle = (category: string) => ({
+    "&.MuiButtonBase-root:hover": {
+      backgroundColor: menu === category ? "primary.main" : "white",
+      boxShadow: "none",
+    },
+    boxShadow: "none",
+    border: 1,
+    borderColor: "#D6D8DB",
+    borderRadius: "8px",
+    padding: "8px 16px",
+    width: 270,
+    color: menu === category ? "white" : "black",
+    backgroundColor: menu === category ? "primary.main" : "white",
+  });
+
+  const menuTitles = [
+    "Breakfast",
+    "Salads and Appetizers",
+    "Main Dish",
+    "Dessert",
+  ];
   return (
-    <>
-      <main>
-        <Container maxWidth="lg">
-          <Stack gap={"54px"}>
-            <Stack
-              py={4}
-              gap={"28px"}
-              direction={"row"}
-              justifyContent={"space-between"}
+    <Container>
+      <Stack
+        my={"32px"}
+        direction={"row"}
+        justifyContent={"center"}
+        gap={"26px"}
+      >
+        {menuTitles.map((category, index) => (
+          <Button
+            key={index}
+            disableRipple
+            variant="contained"
+            sx={buttonStyle(category)}
+            onClick={() => setMenu(category)}
+          >
+            <Typography
+              fontSize={"16px"}
+              fontWeight={500}
+              sx={{ textTransform: "none" }}
             >
-              <Button
-                sx={{
-                  width: "280px",
-                  alignItems: "center",
-                  border: "1px solid #D6D8DB",
-                  borderRadius: "8px",
-                  px: "16px",
-                  py: "8px",
-                  color: "black",
-                }}
-                onClick={() => {
-                  setShow(0);
-                }}
-              >
-                Breakfast
-              </Button>
-              <Button
-                sx={{
-                  width: "280px",
-                  alignItems: "center",
-                  border: "1px solid #D6D8DB",
-                  borderRadius: "8px",
-                  px: "16px",
-                  py: "8px",
-                  color: "black",
-                }}
-                onClick={() => {
-                  setShow(1);
-                }}
-              >
-                Sidedish
-              </Button>
-              <Button
-                sx={{
-                  width: "280px",
-                  alignItems: "center",
-                  border: "1px solid #D6D8DB",
-                  borderRadius: "8px",
-                  px: "16px",
-                  py: "8px",
-                  color: "black",
-                }}
-                onClick={() => {
-                  setShow(2);
-                }}
-              >
-                Main Course
-              </Button>
-              <Button
-                sx={{
-                  width: "280px",
-                  alignItems: "center",
-                  border: "1px solid #D6D8DB",
-                  borderRadius: "8px",
-                  px: "16px",
-                  py: "8px",
-                  color: "black",
-                }}
-                onClick={() => {
-                  setShow(3);
-                }}
-              >
-                Dessert
-              </Button>
-            </Stack>
-            <Stack>
-              {show == 0 && <Breakfast />}
-              {show == 1 && <Sidedish />}
-              {show == 2 && <MainCourse />}
-              {show == 3 && <Dessert />}
-            </Stack>
-          </Stack>
-        </Container>
-      </main>
-    </>
+              {category}
+            </Typography>
+          </Button>
+        ))}
+      </Stack>
+      <Stack mt={"54px"} mb={"80px"} gap={"60px"}>
+        <Stack gap={3} direction={"row"} flexWrap={"wrap"}>
+          {foodData
+            .filter((item) => item.category == menu)
+            .map((data, index) => (
+              <CardModal key={index} data={data} />
+            ))}
+        </Stack>
+      </Stack>
+    </Container>
   );
 };
-export default Home;
+export default Menu;

@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import { Layout } from "@/components/Layout/Layout";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FoodContextProvider } from "@/components/Context/FoodContext";
-import { CartContextProvider } from "@/components/Context/FoodChart";
+import { CartContextProvider } from "@/components/Context/CartContext";
 import Head from "next/head";
 const theme = createTheme({
   palette: {

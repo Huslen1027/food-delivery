@@ -6,8 +6,8 @@ import Pineconelogo from "../Icon/HeaderIcon/Pineconelogo";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import PersonIcon from "../Icon/HeaderIcon/PersonIcon";
-import ShoppingIcon from "../Icon/HeaderIcon/ShoppingIcon";
 import { useRouter } from "next/router";
+import { BasketDrawer } from "../Drawer/Drawer";
 export const Header = () => {
   const router = useRouter();
   return (
@@ -96,7 +96,8 @@ export const Header = () => {
             alignItems={"center"}
             width={"124px"}
           >
-            <ShoppingIcon />
+            <BasketDrawer />
+
             <Button
               sx={{
                 color: "#000",

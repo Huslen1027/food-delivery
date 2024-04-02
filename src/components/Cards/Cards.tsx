@@ -1,9 +1,10 @@
-import { Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import { Star } from "@/components/Icon/FooterIcon/Star";
 import { food, Category } from "@/utils/HomeCard";
-import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 export const Cards = () => {
+  const router = useRouter();
   const filterFoods = food.filter((item) => item.discount > 0);
   const saleFoods = filterFoods.slice(0, 4);
 
@@ -31,7 +32,12 @@ export const Cards = () => {
                Хямдралтай
             </Typography>
           </Stack>
-          <Link href={"menu"} style={{ textDecoration: "none" }}>
+          <Button
+            onClick={() => {
+              router.push("/login");
+            }}
+            style={{ textDecoration: "none" }}
+          >
             <Typography
               fontSize={"14px"}
               color={"#18BA51"}
@@ -39,7 +45,7 @@ export const Cards = () => {
             >
               Бүгдийг харах
             </Typography>
-          </Link>
+          </Button>
         </Stack>
         <Stack direction={"row"} justifyContent={"space-between"}>
           {saleFoods.map((e, index) => {
@@ -102,7 +108,12 @@ export const Cards = () => {
                       {Title}
                   </Typography>
                 </Stack>
-                <Link href={"menu"} style={{ textDecoration: "none" }}>
+                <Button
+                  onClick={() => {
+                    router.push("/menu");
+                  }}
+                  style={{ textDecoration: "none" }}
+                >
                   <Typography
                     fontSize={"14px"}
                     color={"#18BA51"}
@@ -110,7 +121,7 @@ export const Cards = () => {
                   >
                     Бүгдийг харах
                   </Typography>
-                </Link>
+                </Button>
               </Stack>
             </Stack>
           );

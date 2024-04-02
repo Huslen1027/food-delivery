@@ -10,5 +10,5 @@ const theme = createTheme({
 });
 
 export const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
-  return <ThemeProvider theme={theme}></ThemeProvider>;
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
