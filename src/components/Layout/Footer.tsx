@@ -40,6 +40,7 @@ export const Footer = () => {
               router.push("/");
             }}
             sx={{
+              cursor: "pointer",
               textUnderlineOffset: "0",
               color: "#FFF",
             }}
@@ -50,6 +51,7 @@ export const Footer = () => {
 
           <Typography
             sx={{
+              cursor: "pointer",
               color: "#FFF",
             }}
             borderBottom={"1px solid white"}
@@ -58,9 +60,10 @@ export const Footer = () => {
           </Typography>
           <Typography
             onClick={() => {
-              router.push("menu");
+              router.push("/menu");
             }}
             sx={{
+              cursor: "pointer",
               color: "#FFF",
             }}
             borderBottom={"1px solid white"}
@@ -73,6 +76,7 @@ export const Footer = () => {
               router.push("/information/footerinformation4");
             }}
             sx={{
+              cursor: "pointer",
               color: "#FFF",
             }}
             borderBottom={"1px solid white"}
@@ -85,6 +89,7 @@ export const Footer = () => {
               router.push("/information/footerinformation5");
             }}
             sx={{
+              cursor: "pointer",
               color: "#FFF",
             }}
             borderBottom={"1px solid white"}
@@ -97,6 +102,7 @@ export const Footer = () => {
               router.push("/information/footerinformation6");
             }}
             sx={{
+              cursor: "pointer",
               color: "#FFF",
             }}
             borderBottom={"1px solid white"}
@@ -113,6 +119,7 @@ export const Footer = () => {
           width={"1200px"}
           height={"1px"}
           sx={{
+            cursor: "pointer",
             backgroundColor: "white",
           }}
         ></Stack>

@@ -1,16 +1,12 @@
 import { Button, Stack, Typography } from "@mui/material";
 import { Star } from "@/components/Icon/FooterIcon/Star";
-import { food, Category } from "@/utils/HomeCard";
+import { food } from "@/utils/HomeCard";
 import Image from "next/image";
 import { useRouter } from "next/router";
 export const Cards = () => {
   const router = useRouter();
   const filterFoods = food.filter((item) => item.discount > 0);
   const saleFoods = filterFoods.slice(0, 4);
-
-  const filters = Category.map((cat) => {
-    return food.filter((items) => items.category == cat);
-  });
 
   const Title = ["Үндсэн хоол", "Салад ба зууш", "Амттан"];
   return (
@@ -94,38 +90,32 @@ export const Cards = () => {
         </Stack>
       </Stack>
       <Stack gap={3}>
-        {filters.map((e, index) => {
-          return (
-            <Stack key={index} gap={3}>
-              <Stack
-                direction={"row"}
-                justifyContent={"space-between"}
-                alignItems={"center"}
-              >
-                <Stack direction={"row"} py={2} alignItems={"center"}>
-                  <Star />
-                  <Typography fontSize={"22px"} fontWeight={"700"}>
-                      {Title}
-                  </Typography>
-                </Stack>
-                <Button
-                  onClick={() => {
-                    router.push("/menu");
-                  }}
-                  style={{ textDecoration: "none" }}
-                >
-                  <Typography
-                    fontSize={"14px"}
-                    color={"#18BA51"}
-                    justifyContent={"center"}
-                  >
-                    Бүгдийг харах
-                  </Typography>
-                </Button>
-              </Stack>
+        <Stack gap={3}>
+          <Stack
+            direction={"row"}
+            justifyContent={"space-between"}
+            alignItems={"center"}
+          >
+            <Stack direction={"row"} py={2} alignItems={"center"}>
+              <Star />
+              <Typography fontSize={"22px"} fontWeight={"700"}>
+                  {Title}
+              </Typography>
             </Stack>
-          );
-        })}
+            <Button
+              sx={{
+                fontSize: "14px",
+                color: "#18BA51",
+              }}
+              onClick={() => {
+                router.push("/menu");
+              }}
+              style={{ textDecoration: "none" }}
+            >
+              Бүгдийг харах
+            </Button>
+          </Stack>
+        </Stack>
       </Stack>
     </Stack>
   );
