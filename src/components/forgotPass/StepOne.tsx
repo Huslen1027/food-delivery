@@ -5,14 +5,18 @@ import {
   Typography,
   Button,
 } from "@mui/material";
+import { useRouter } from "next/router";
 
 const btnStyle = {
   backgroundColor: "#18BA51",
   padding: "5px",
   color: "#fff",
+  width: "384px",
+  height: "44px",
 };
 
 export const StepOne = () => {
+  const router = useRouter();
   return (
     <Stack
       sx={{
@@ -48,7 +52,13 @@ export const StepOne = () => {
             />
           </FormControl>
         </Stack>
-        <Button sx={btnStyle} variant="contained">
+        <Button
+          onClick={() => {
+            router.push("");
+          }}
+          sx={btnStyle}
+          variant="contained"
+        >
           {"Үргэлжлүүлэх"}
         </Button>
       </Stack>
