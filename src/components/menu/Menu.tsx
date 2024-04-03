@@ -1,5 +1,5 @@
 import { Button, Container, Stack, Typography } from "@mui/material";
-import { CardModal } from "../Cards/CardModal";
+import { CardModal } from "../Cards/ModalCard";
 import { useState } from "react";
 import { useFoodData } from "../Context/FoodContext";
 export const Menu = () => {

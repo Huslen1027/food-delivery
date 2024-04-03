@@ -1,7 +1,7 @@
 import { Container, Link, Stack, Typography } from "@mui/material";
 import { Star } from "../Icon/FooterIcon/Star";
 import { ArrowIcon } from "../Icon/Homeicon/Adviceicons/ArrowICon";
-import { CardModal } from "../Cards/CardModal";
+import { CardModal } from "../Cards/ModalCard";
 import { useFoodData } from "../Context/FoodContext";
 export const CategoryTab = ({ category }: { category: string }) => {
   const { foodData } = useFoodData();

@@ -1,6 +1,7 @@
 import { useCartItems } from "../Context/CartContext";
 import { Box, Button, CardMedia, Stack, Typography } from "@mui/material";
-
+import DeleteIcon from "../Icon/Modalicon/Deleteicon";
+import React from "react";
 const buttonStyle = {
   maxWidth: "45px",
   maxHeight: "40px",
@@ -38,9 +39,19 @@ export const DrawerCard = () => {
             width={"50%"}
             height={"150px"}
           >
-            <Typography fontSize={"18px"} fontWeight={600}>
-              {data.foodName}
-            </Typography>
+            <Stack
+              direction={"row"}
+              alignItems={"center"}
+              justifyContent={"space-between"}
+            >
+              <Typography fontSize={"18px"} fontWeight={600}>
+                {data.foodName}
+              </Typography>
+              <Button>
+                <DeleteIcon />
+              </Button>
+            </Stack>
+
             <Typography color={"#18BA51"} fontWeight={600} fontSize={"18px"}>
               {data.price}₮
             </Typography>

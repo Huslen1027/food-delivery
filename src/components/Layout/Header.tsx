@@ -1,7 +1,7 @@
 import * as React from "react";
 import Searchicon from "../Icon/HeaderIcon/Searchicon";
 import IconButton from "@mui/material/IconButton";
-import { Button, InputBase, Stack } from "@mui/material";
+import { Button, InputBase, Stack, Typography } from "@mui/material";
 import Pineconelogo from "../Icon/HeaderIcon/Pineconelogo";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
@@ -41,7 +41,7 @@ export const Header = () => {
             fontSize: "16px",
           }}
         >
-          НҮҮР
+          <Typography> НҮҮР</Typography>
         </Button>
 
         <Button
@@ -54,7 +54,7 @@ export const Header = () => {
             fontSize: "16px",
           }}
         >
-          ХООЛНЫ ЦЭС
+          <Typography> ХООЛНЫ ЦЭС</Typography>
         </Button>
 
         <Button
@@ -67,17 +67,17 @@ export const Header = () => {
             fontSize: "16px",
           }}
         >
-          ХҮРГЭЛТИЙН БҮС
+          <Typography> ХҮРГЭЛТИЙН БҮС</Typography>
         </Button>
       </Grid>
-      <Grid component="div" display="flex" gap="40px" alignItems="center">
+      <Grid component="div" display="flex" gap="10px" alignItems="center">
         <Paper
           variant="outlined"
           component="form"
           sx={{
             display: "flex",
             alignItems: "center",
-            width: "320px",
+            width: "270px",
             borderRadius: "8px",
             borderColor: "black",
             height: "45px",
@@ -90,14 +90,8 @@ export const Header = () => {
           <InputBase placeholder="Хайх" type="text" />
         </Paper>
         <Grid display={"flex"}>
-          <Stack
-            direction={"row"}
-            gap={"10px"}
-            alignItems={"center"}
-            width={"124px"}
-          >
+          <Stack direction={"row"} alignItems={"center"} width={"134px"}>
             <BasketDrawer />
-
             <Button
               sx={{
                 color: "#000",
@@ -105,7 +99,7 @@ export const Header = () => {
                 fontSize: "16px",
               }}
             >
-              Сагс
+              <Typography> Сагс</Typography>
             </Button>
           </Stack>
           <Stack
@@ -128,7 +122,7 @@ export const Header = () => {
                 fontSize: "16px",
               }}
             >
-              Нэвтрэх
+              <Typography> Нэвтрэх</Typography>
             </Button>
           </Stack>
         </Grid>

@@ -9,6 +9,8 @@ import {
 } from "@mui/material";
 import { FoodCard } from ".";
 import { useCartItems } from "../Context/CartContext";
+import DeleteIcon from "../Icon/Modalicon/Deleteicon";
+
 interface data {
   id: number;
   category: string;
@@ -19,6 +21,7 @@ interface data {
   sale: number;
   stock: number;
 }
+
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -30,6 +33,7 @@ const style = {
   borderRadius: 4,
   p: 4,
 };
+
 const buttonStyle = {
   maxWidth: "45px",
   maxHeight: "45px",
@@ -41,8 +45,6 @@ const buttonStyle = {
 
 export const CardModal = ({ data }: { data: data }) => {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
   const [buyCount, setBuyCount] = React.useState(1);
   const { cartFoods, setCartFoods } = useCartItems();
 
@@ -51,6 +53,7 @@ export const CardModal = ({ data }: { data: data }) => {
     const newCount = buyCount - 1;
     newCount < 1 ? setBuyCount(1) : setBuyCount(newCount);
   };
+
   const onSubmit = () => {
     const cartData = {
       id: data.id,
@@ -59,16 +62,19 @@ export const CardModal = ({ data }: { data: data }) => {
       imagePath: data.imagePath,
       ingredients: data.ingredients,
       price: data.price,
-      sale: data.price,
+      sale: data.sale,
       stock: data.stock,
       count: buyCount,
     };
     setCartFoods([...cartFoods, cartData]);
     handleClose();
   };
+
+  const handleClose = () => setOpen(false);
+
   return (
     <>
-      <Box onClick={handleOpen}>
+      <Box onClick={() => setOpen(true)}>
         <FoodCard data={data} />
       </Box>
       <Modal
@@ -89,17 +95,24 @@ export const CardModal = ({ data }: { data: data }) => {
           </Box>
 
           <Stack gap={4} width={"380px"} justifyContent={"center"}>
-            <Stack>
+            <Stack
+              direction={"row"}
+              justifyContent={"space-between"}
+              gap={"30px"}
+            >
               <Typography fontSize={"28px"} fontWeight={700}>
                 {data.foodName}
               </Typography>
-              <Typography fontSize={"18px"} fontWeight={600} color={"#18BA51"}>
-                {data.sale == 0
-                  ? data.price
-                  : data.price - (data.price * data.sale) / 100}
-                ₮
-              </Typography>
+              <Button onClick={() => setOpen(false)}>
+                <DeleteIcon />
+              </Button>
             </Stack>
+            <Typography fontSize={"18px"} fontWeight={600} color={"#18BA51"}>
+              {data.sale === 0
+                ? data.price
+                : data.price - (data.price * data.sale) / 100}
+              ₮
+            </Typography>
             <Stack gap={"12px"}>
               <Typography fontSize={"18px"} fontWeight={600}>
                 Орц
