@@ -1,38 +1,61 @@
 import { Stack, Typography } from "@mui/material";
-import { DrawerCard } from "../Cards";
+import { OrderCard } from "../Cards/OrderCard";
 export const StepOrder2 = () => {
   return (
-    <Stack display={"flex"} direction={"column"}>
-      {" "}
+    <Stack display={"flex"} direction={"column"} gap={"20px"}>
       <Stack
-        display={"flex"}
-        direction={"column"}
-        alignItems={"start"}
+        direction={"row"}
+        alignItems={"center"}
         width={"432px"}
         height={"100px"}
+        gap={"15px"}
       >
-        <Typography fontSize={"14px"} color={"#8B8E95"}>
-          Алхам 2
-        </Typography>
-        <Typography fontSize={"20px"}>Захиалга баталгаажуулах</Typography>
-        <Typography color={"#0468C8"} fontSize={"16px"}>
-          Хүлээгдэж байна
-        </Typography>
+        <Stack direction={"row"} alignItems={"center"} gap={"8px"}>
+          <Stack
+            direction={"row"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            borderRadius={"50%"}
+            border={"1px solid #0468C8"}
+            width={"48px"}
+            height={"48px"}
+            sx={{
+              cursor: "pointer",
+            }}
+          >
+            <Stack
+              width={"24px"}
+              height={"24px"}
+              borderRadius={"50%"}
+              sx={{
+                backgroundColor: "#0468C8",
+              }}
+            ></Stack>
+          </Stack>
+        </Stack>
+        <Stack>
+          <Typography fontSize={"14px"} color={"#8B8E95"}>
+            Алхам 2
+          </Typography>
+          <Typography fontSize={"20px"}>Захиалга баталгаажуулах</Typography>
+          <Typography color={"#0468C8"} fontSize={"16px"}>
+            Хүлээгдэж байна
+          </Typography>
+        </Stack>
       </Stack>
       <Stack
-        display={"inline-flex"}
+        display={"flex"}
         height={"712px"}
         padding={"24px"}
         direction={"column"}
-        justifyContent={"space-between"}
         alignItems={"start"}
         borderRadius={"16px"}
         sx={{
           backgroundColor: "#fff",
         }}
-        boxShadow={"0px 0px 20px 0px"}
+        border={"1px solid black"}
       >
-        <DrawerCard />
+        <OrderCard />
       </Stack>
     </Stack>
   );
