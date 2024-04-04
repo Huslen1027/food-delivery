@@ -2,6 +2,7 @@ import { Grid, Stack, Typography } from "@mui/material";
 import { Adresses } from "@/utils/footer/Adresses";
 import { Star } from "@/components/Icon/FooterIcon/Star";
 import dynamic from "next/dynamic";
+
 const Map = dynamic(() => import("@/components/googlemap/GoogleMap"), {
   ssr: false,
 });
@@ -30,7 +31,7 @@ const footerinformation5 = () => {
               padding={"24px"}
               gap={"8px"}
               borderRadius={"16px"}
-              boxShadow={"0px 0px 10px 0px"}
+              boxShadow={"0px 0px 20px 0px rgba(0, 0, 0, 0.05)"}
               sx={{
                 backgroundColor: "#FFF",
               }}
@@ -44,22 +45,17 @@ const footerinformation5 = () => {
                   width={"540px"}
                 >
                   <Typography fontSize={"20px"} fontWeight={500}>
-                    А бүс
+                    {e.title}
                   </Typography>
                 </Stack>
-                <Stack
-                  display={"flex"}
-                  direction={"row"}
-                  alignItems={"start"}
-                  gap={"16px"}
-                >
+                <Stack direction={"row"} alignItems={"start"} gap={"16px"}>
                   <Stack
                     display={"flex"}
                     direction={"column"}
                     gap={"14px"}
                     width={"262px"}
                   >
-                    <Typography>{e.text}</Typography>
+                    <Typography>{e.textOne}</Typography>
                     <Typography>{e.textTwo}</Typography>
                     <Typography>{e.textThree}</Typography>
                     <Typography>{e.textFour}</Typography>
@@ -73,7 +69,7 @@ const footerinformation5 = () => {
                     gap={"14px"}
                     width={"262px"}
                   >
-                    <Typography>{e.text}</Typography>
+                    <Typography>{e.textOne}</Typography>
                     <Typography>{e.textTwo}</Typography>
                     <Typography>{e.textThree}</Typography>
                     <Typography>{e.textFour}</Typography>

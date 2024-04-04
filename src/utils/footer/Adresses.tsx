@@ -1,7 +1,7 @@
 export const Adresses = [
   {
     title: "А бүс",
-    text: "Нархан хотхон",
+    textOne: "Нархан хотхон",
     textTwo: "26-р байр",
     textThree: "45-р байр",
     textFour: "3-р байр",
@@ -11,7 +11,7 @@ export const Adresses = [
   },
   {
     title: "Б бүс",
-    text: "Нархан хотхон",
+    textOne: "Нархан хотхон",
     textTwo: "26-р байр",
     textThree: "45-р байр",
     textFour: "3-р байр",

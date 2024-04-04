@@ -11,6 +11,13 @@ import {
 
 import React from "react";
 
+const btnStyle = {
+  backgroundColor: "#18BA51",
+  padding: "5px",
+  color: "#fff",
+  width: "384px",
+  height: "44px",
+};
 export const StepTwo = () => {
   const [showPassword, setShowPassword] = React.useState(false);
 
@@ -20,11 +27,7 @@ export const StepTwo = () => {
   ) => {
     event.preventDefault();
   };
-  const btnStyle = {
-    bgcolor: "#18BA51",
-    padding: "5px",
-    color: "#fff",
-  };
+
   return (
     <Stack
       sx={{
@@ -76,7 +79,9 @@ export const StepTwo = () => {
           </FormGroup>
         </Stack>
       </Stack>
-      <Button sx={{ btnStyle }}>{"Үргэлжлүүлэх"}</Button>
+      <Button variant="contained" sx={btnStyle}>
+        {"Үргэлжлүүлэх"}
+      </Button>
     </Stack>
   );
 };

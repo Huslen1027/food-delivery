@@ -1,7 +1,7 @@
 import { InputLabel, Stack, Typography } from "@mui/material";
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Location from "../Icon/Modalicon/Location";
+
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
@@ -32,33 +32,25 @@ export const OrderAdress = () => {
       <Typography>Хаяг аа оруулна уу</Typography>
       <Box sx={{ minWidth: 384, backgroundColor: "#F7F7F8" }}>
         <FormControl fullWidth>
-          <Select
-            value={adress1}
-            onChange={handleChange1}
-            placeholder="Дүүрэг сонгоно уу"
-          >
+          <InputLabel>Дүүрэг сонгоно уу</InputLabel>
+          <Select value={adress1} onChange={handleChange1}>
+            <MenuItem value={0}>Дүүрэг сонгоно уу</MenuItem>
             <MenuItem value={10}>Баянзүрх дүүрэг</MenuItem>
             <MenuItem value={20}>Хан-Уул дүүрэг</MenuItem>
             <MenuItem value={30}>Баянгол дүүрэг</MenuItem>
-            <MenuItem value={30}>Сонгинохайрхан дүүрэг</MenuItem>
-            <MenuItem value={30}>Чингэлтэй дүүрэг</MenuItem>
+            <MenuItem value={40}>Сонгинохайрхан дүүрэг</MenuItem>
+            <MenuItem value={50}>Чингэлтэй дүүрэг</MenuItem>
           </Select>
         </FormControl>
       </Box>
       <Box sx={{ minWidth: 384, backgroundColor: "#F7F7F8" }}>
+        <InputLabel>Хороо сонгоно уу</InputLabel>
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-placeholder-label">
-            Хороо сонгоно уу?
-          </InputLabel>
           <Select
-            labelId="demo-simple-select-placeholder-label"
-            id="demo-simple-select-placeholder"
             value={adress2}
             onChange={handleChange2}
             placeholder="Дүүрэг сонгоно уу"
           >
-            <Location />
-
             <MenuItem value={10}>1-р хороо</MenuItem>
             <MenuItem value={20}>2-р хороо</MenuItem>
             <MenuItem value={20}>3-р хороо</MenuItem>
@@ -71,6 +63,7 @@ export const OrderAdress = () => {
       </Box>
       <Box sx={{ minWidth: 384, backgroundColor: "#F7F7F8" }}>
         <FormControl fullWidth>
+          <InputLabel>Байр, гудамж сонгоно уу</InputLabel>
           <Select value={adress3} onChange={handleChange3}>
             <MenuItem value={10}>Нархан хотхон</MenuItem>
             <MenuItem value={20}>26-р байр</MenuItem>

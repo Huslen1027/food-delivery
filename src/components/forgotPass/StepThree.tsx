@@ -20,9 +20,11 @@ export const StepThree = () => {
     event.preventDefault();
   };
   const btnStyle = {
-    bgcolor: "#18BA51",
+    backgroundColor: "#18BA51",
     padding: "5px",
     color: "#fff",
+    width: "384px",
+    height: "44px",
   };
   return (
     <Stack
@@ -93,7 +95,9 @@ export const StepThree = () => {
             </FormControl>
           </FormGroup>
         </Stack>
-        <Button sx={btnStyle}>{"Үргэлжлүүлэх"}</Button>
+        <Button variant={"contained"} sx={btnStyle}>
+          {"Үргэлжлүүлэх"}
+        </Button>
       </Stack>
     </Stack>
   );

@@ -1,8 +1,9 @@
 import { useCartItems } from "../Context/CartContext";
 import { Box, Button, CardMedia, Stack, Typography } from "@mui/material";
 import React from "react";
-
+import { useRouter } from "next/router";
 export const OrderCard = () => {
+  const router = useRouter();
   const { cartFoods } = useCartItems();
 
   let sum = 0;
@@ -75,6 +76,9 @@ export const OrderCard = () => {
           </Typography>
         </Stack>
         <Button
+          onClick={() => {
+            router.push("/user");
+          }}
           variant="contained"
           sx={{ color: "white", width: "187px", height: "48px" }}
         >

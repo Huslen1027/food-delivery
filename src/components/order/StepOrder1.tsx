@@ -1,4 +1,4 @@
-import { Grid, Stack, TextField, Typography } from "@mui/material";
+import { Grid, Input, Stack, TextField, Typography } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 import { OrderAdress } from "./OrderAdress";
 export const StepOrder1 = () => {
@@ -54,9 +54,9 @@ export const StepOrder1 = () => {
         alignItems={"start"}
         borderRadius={"16px"}
         sx={{
-          backgroundColor: "#fff",
+          backgroundColor: "#FFF",
+          boxShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.05)",
         }}
-        border={"1px solid black"}
       >
         <Stack
           display={"flex"}
@@ -86,15 +86,18 @@ export const StepOrder1 = () => {
               }}
             >
               <Typography>Нэмэлт мэдээлэл</Typography>
-              <TextField
+              <Input
+                placeholder="Орц, давхар, орцны код ..."
                 sx={{
+                  py: 1,
+                  px: 2,
+                  alignItems: "start",
                   border: "none",
                   width: "384px",
                   height: "112px",
                   backgroundColor: "#F7F7F8",
                 }}
-                placeholder="Имэйл Орц, давхар, орцны код ... "
-              />
+              ></Input>
             </Grid>
             <Grid
               sx={{
@@ -104,6 +107,7 @@ export const StepOrder1 = () => {
             >
               <Typography>Утасны дугаар*</Typography>
               <TextField
+                placeholder="Утасны дугаараа оруулна уу"
                 sx={{
                   border: "none",
                   width: "384px",
@@ -122,7 +126,7 @@ export const StepOrder1 = () => {
               <Typography>Төлбөр төлөх </Typography>
               <Stack direction={"row"} gap={"10px"}>
                 <Stack direction={"row"} alignItems={"center"} width={"175px"}>
-                  <Checkbox {...label} defaultChecked />
+                  <Checkbox {...label} />
                   <Typography color={"#8B8E95"}>Бэлнээр</Typography>
                 </Stack>
                 <Stack direction={"row"} alignItems={"center"} width={"175px"}>

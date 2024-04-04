@@ -51,9 +51,9 @@ export const StepOrder2 = () => {
         alignItems={"start"}
         borderRadius={"16px"}
         sx={{
-          backgroundColor: "#fff",
+          backgroundColor: "#FFF",
+          boxShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.05)",
         }}
-        border={"1px solid black"}
       >
         <OrderCard />
       </Stack>
