@@ -10,17 +10,34 @@ import {
   Typography,
   Checkbox,
 } from "@mui/material";
-import React from "react";
-
+import { useState } from "react";
 export const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
-  const [showPassword, setShowPassword] = React.useState(false);
-
+  const [showPassword, setShowPassword] = useState(false);
+  const [input, setInput] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
     event.preventDefault();
+  };
+  const HandleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+    setInput(!!e.target.value && !!password);
+  };
+  const HandlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+    setInput(!!e.target.value && !!email);
+  };
+  interface datatype {
+    condition: string;
+    value1: string;
+    value2: string;
+  }
+  const match = ({ condition, value1, value2 }: datatype) => {
+    return condition ? value1 : value2;
   };
   return (
     <Stack
@@ -54,6 +71,7 @@ export const Signup = () => {
               />
               <Typography fontSize={"14px"}>И-мэйл </Typography>
               <TextField
+                onChange={HandleEmailChange}
                 sx={{
                   backgroundColor: "#F7F7F8",
                 }}
@@ -73,18 +91,17 @@ export const Signup = () => {
             <FormControl sx={{ mt: 2, width: "100%" }} variant="outlined">
               <Typography fontSize={"14px"}>Нууц үг</Typography>
               <OutlinedInput
+                onChange={HandlePasswordChange}
                 sx={{
                   backgroundColor: "#F7F7F8",
                 }}
                 placeholder="Нууц үг"
-                id="outlined-adornment-password"
                 type={showPassword ? "text" : "password"}
                 endAdornment={
                   <IconButton
                     aria-label="toggle password visibility"
                     onClick={handleClickShowPassword}
                     onMouseDown={handleMouseDownPassword}
-                    edge="end"
                   >
                     {showPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
@@ -96,6 +113,7 @@ export const Signup = () => {
             <FormControl sx={{ mt: 1, width: "100%" }} variant="outlined">
               <Typography fontSize={"14px"}>Нууц үг</Typography>
               <OutlinedInput
+                onChange={HandlePasswordChange}
                 sx={{
                   backgroundColor: "#F7F7F8",
                 }}
@@ -123,10 +141,12 @@ export const Signup = () => {
             </Typography>
           </Stack>
           <Button
+            variant={"contained"}
             sx={{
+              backgroundColor: match(input, "#F7F7F8", "#18BA51"),
+              color: match(input, "#FFF", "#000"),
               width: "384px",
               padding: "8px 16px",
-              border: "1px solid #18BA51",
             }}
           >
             Бүртгүүлэх

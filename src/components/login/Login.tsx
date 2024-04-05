@@ -54,10 +54,10 @@ export const Login = () => {
           <FormGroup>
             <FormControl>
               <TextField
-                onChange={HandleEmailCHange}
                 sx={{
-                  backgroundColor: input ? "#18BA51" : "#F7F7F8",
+                  backgroundColor: "#F7F7F8",
                 }}
+                onChange={HandleEmailCHange}
                 fullWidth
                 id="fullWidth"
                 placeholder="Имэйл хаягаа оруулна уу"
@@ -99,13 +99,13 @@ export const Login = () => {
         </Stack>
         <Stack direction="column" spacing={4}>
           <Button
+            variant={"contained"}
             sx={{
               backgroundColor: input ? "#18BA51" : "#F7F7F8",
-              color: "#000",
+              color: input ? "#FFF" : "#000",
               width: "384px",
               padding: "8px 16px",
               ":hover": "#18BA51",
-              border: "2px solid #EEEFF2",
             }}
           >
             Нэвтрэх

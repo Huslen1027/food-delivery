@@ -18,49 +18,51 @@ export const OrderCard = () => {
       height={"100%"}
       width={"432px"}
     >
-      {cartFoods.map((data, index) => (
-        <Stack
-          borderTop={1}
-          borderBottom={1}
-          borderColor={"#D6D8DB"}
-          py={"16px"}
-          key={index}
-          gap={2}
-          direction={"row"}
-          width={"384px"}
-          height={"183px"}
-        >
-          <Box width={"50%"}>
-            <CardMedia
-              component="img"
-              width="184"
-              height="131"
-              image={data.imagePath}
-              alt="green iguana"
-            />
-          </Box>
-          <Stack justifyContent={"space-around"} width={"50%"} height={"150px"}>
+      <Stack>
+        {cartFoods.map((data, index) => (
+          <Stack
+            borderTop={1}
+            borderBottom={1}
+            borderColor={"#D6D8DB"}
+            py={"16px"}
+            key={index}
+            gap={2}
+            direction={"row"}
+            width={"384px"}
+            height={"183px"}
+          >
+            <Box width={"50%"}>
+              <CardMedia
+                component="img"
+                width="184"
+                height="131"
+                image={data.imagePath}
+                alt="green iguana"
+              />
+            </Box>
             <Stack
-              direction={"row"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
+              justifyContent={"space-around"}
+              width={"50%"}
+              height={"150px"}
             >
-              <Typography fontSize={"18px"} fontWeight={600}>
-                {data.foodName}
+              <Stack direction={"row"} alignItems={"center"}>
+                <Typography fontSize={"18px"} fontWeight={600}>
+                  {data.foodName}
+                </Typography>
+              </Stack>
+
+              <Typography color={"#18BA51"} fontWeight={600} fontSize={"18px"}>
+                {data.price}₮
+              </Typography>
+              <Typography color={"#767676"}>
+                {data.ingredients.map((e, index) =>
+                  index === data.ingredients.length - 1 ? e : e + ","
+                )}
               </Typography>
             </Stack>
-
-            <Typography color={"#18BA51"} fontWeight={600} fontSize={"18px"}>
-              {data.price}₮
-            </Typography>
-            <Typography color={"#767676"}>
-              {data.ingredients.map((e, index) =>
-                index === data.ingredients.length - 1 ? e : e + ","
-              )}
-            </Typography>
           </Stack>
-        </Stack>
-      ))}
+        ))}
+      </Stack>
 
       <Stack
         borderColor={"#D6D8DB"}

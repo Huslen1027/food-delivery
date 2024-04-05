@@ -22,6 +22,7 @@ export const Header = () => {
     >
       <Grid component="div" display="flex" gap="20px">
         <IconButton
+          onClick={() => router.push("/")}
           size="large"
           edge="start"
           color="inherit"

@@ -44,6 +44,7 @@ export const StepOrder2 = () => {
         </Stack>
       </Stack>
       <Stack
+        overflow={"scroll"}
         display={"flex"}
         height={"712px"}
         padding={"24px"}
