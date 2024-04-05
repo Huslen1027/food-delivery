@@ -12,13 +12,23 @@ import * as React from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import Link from "next/link";
 export const Login = () => {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
   const [showPassword, setShowPassword] = React.useState(false);
-
+  const [input, setInput] = React.useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
     event.preventDefault();
+  };
+  const HandleEmailCHange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+    setInput(!!e.target.value && !!password);
+  };
+  const HandlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+    setInput(!!e.target.value && !!email);
   };
   return (
     <Stack
@@ -44,8 +54,9 @@ export const Login = () => {
           <FormGroup>
             <FormControl>
               <TextField
+                onChange={HandleEmailCHange}
                 sx={{
-                  backgroundColor: "#F7F7F8",
+                  backgroundColor: input ? "#18BA51" : "#F7F7F8",
                 }}
                 fullWidth
                 id="fullWidth"
@@ -55,6 +66,7 @@ export const Login = () => {
             <FormControl sx={{ mt: 3, width: "100%" }} variant="outlined">
               <Typography fontSize={"14px"}>Нууц үг</Typography>
               <OutlinedInput
+                onChange={HandlePasswordChange}
                 sx={{
                   backgroundColor: "#F7F7F8",
                 }}
@@ -88,7 +100,7 @@ export const Login = () => {
         <Stack direction="column" spacing={4}>
           <Button
             sx={{
-              backgroundColor: "#EEEFF2",
+              backgroundColor: input ? "#18BA51" : "#F7F7F8",
               color: "#000",
               width: "384px",
               padding: "8px 16px",

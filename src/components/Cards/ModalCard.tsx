@@ -118,7 +118,11 @@ export const CardModal = ({ data }: { data: data }) => {
                 Орц
               </Typography>
               <Typography color={"#767676"} p={1}>
-                {data.ingredients}
+                {data.ingredients.map((ingredient, index) =>
+                  index === data.ingredients.length - 1
+                    ? ingredient
+                    : ingredient + ","
+                )}
               </Typography>
             </Stack>
             <Typography fontSize={"18px"} fontWeight={600}>

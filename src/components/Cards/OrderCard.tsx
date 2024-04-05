@@ -53,7 +53,11 @@ export const OrderCard = () => {
             <Typography color={"#18BA51"} fontWeight={600} fontSize={"18px"}>
               {data.price}₮
             </Typography>
-            <Typography color={"#767676"}>{data.ingredients}</Typography>
+            <Typography color={"#767676"}>
+              {data.ingredients.map((e, index) =>
+                index === data.ingredients.length - 1 ? e : e + ","
+              )}
+            </Typography>
           </Stack>
         </Stack>
       ))}
