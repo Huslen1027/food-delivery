@@ -1,6 +1,8 @@
 import { Grid, Input, Stack, TextField, Typography } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
-import { OrderAdress } from "./OrderAdress";
+import { OrderAdress1 } from "./OrderAdress1";
+import { OrderAdress2 } from "./OrderAdress2";
+import { OrderAdress3 } from "./OrderAdress3";
 export const StepOrder1 = () => {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   return (
@@ -71,7 +73,9 @@ export const StepOrder1 = () => {
             gap={"16px"}
             alignItems={"start"}
           >
-            <OrderAdress />
+            <OrderAdress1 />
+            <OrderAdress2 />
+            <OrderAdress3 />
           </Stack>
           <Stack
             display={"flex"}
