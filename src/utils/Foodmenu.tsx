@@ -3,15 +3,15 @@ import { MenuIcon } from "@/components/Icon/adminicon/MenuIcon";
 export const Foodmenu = [
   { text: "Breakfast", icon: <MenuIcon /> },
   {
-    text: "Soup",
+    text: "Salads and Appetizers",
     icon: <MenuIcon />,
   },
   {
-    text: "Maincourse",
+    text: "Main Dish",
     icon: <MenuIcon />,
   },
   {
-    text: "Desserts",
+    text: "Dessert",
     icon: <MenuIcon />,
   },
   {

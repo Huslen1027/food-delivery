@@ -1,8 +1,8 @@
 import * as React from "react";
-import HeaderLoginModal from "../Cards/HeaderLoginModal";
+// import HeaderLoginModal from "../Cards/HeaderLoginModal";
 import Searchicon from "../Icon/HeaderIcon/Searchicon";
 import IconButton from "@mui/material/IconButton";
-import { Button, InputBase, Stack, Typography } from "@mui/material";
+import { InputBase, Stack, Typography } from "@mui/material";
 import Pineconelogo from "../Icon/HeaderIcon/Pineconelogo";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
@@ -21,56 +21,67 @@ export const Header = () => {
       maxWidth={"lg"}
       margin={"auto"}
     >
-      <Grid component="div" display="flex" gap="20px">
+      <Grid component="div" display="flex" gap="25px" alignItems={"center"}>
         <IconButton
           onClick={() => router.push("/")}
           size="large"
           edge="start"
           color="inherit"
           aria-label="open drawer"
-          sx={{ mr: 2, justifyContent: "center", alignItems: "center" }}
         >
           <Pineconelogo />
         </IconButton>
 
-        <Button
+        <Stack
           onClick={() => {
             router.push("/");
           }}
-          sx={{
-            color: "#000",
-            fontWeight: "540",
-            fontSize: "16px",
-          }}
         >
-          <Typography> НҮҮР</Typography>
-        </Button>
+          <Typography
+            sx={{
+              cursor: "pointer",
+              color: "#000",
+              fontWeight: "550",
+              fontSize: "14px",
+            }}
+          >
+            НҮҮР
+          </Typography>
+        </Stack>
 
-        <Button
+        <Stack
           onClick={() => {
             router.push("/menu");
           }}
-          sx={{
-            color: "#000",
-            fontWeight: "540",
-            fontSize: "16px",
-          }}
         >
-          <Typography> ХООЛНЫ ЦЭС</Typography>
-        </Button>
+          <Typography
+            sx={{
+              cursor: "pointer",
+              color: "#000",
+              fontWeight: "550",
+              fontSize: "14px",
+            }}
+          >
+            ХООЛНЫ ЦЭС
+          </Typography>
+        </Stack>
 
-        <Button
+        <Stack
           onClick={() => {
             router.push("/information/footerinformation5");
           }}
-          sx={{
-            color: "#000",
-            fontWeight: "540",
-            fontSize: "16px",
-          }}
         >
-          <Typography> ХҮРГЭЛТИЙН БҮС</Typography>
-        </Button>
+          <Typography
+            sx={{
+              cursor: "pointer",
+              color: "#000",
+              fontWeight: "550",
+              fontSize: "14px",
+            }}
+          >
+            ХҮРГЭЛТИЙН БҮС
+          </Typography>
+        </Stack>
       </Grid>
       <Grid component="div" display="flex" gap="10px" alignItems="center">
         <Paper
@@ -94,15 +105,17 @@ export const Header = () => {
         <Grid display={"flex"}>
           <Stack direction={"row"} alignItems={"center"} width={"134px"}>
             <BasketDrawer />
-            <Button
-              sx={{
-                color: "#000",
-                fontWeight: "540",
-                fontSize: "16px",
-              }}
-            >
-              <Typography> Сагс</Typography>
-            </Button>
+            <Stack>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontWeight: "550",
+                  fontSize: "15px",
+                }}
+              >
+                Сагс
+              </Typography>
+            </Stack>
           </Stack>
           <Stack
             direction={"row"}
@@ -113,19 +126,22 @@ export const Header = () => {
             }}
           >
             <PersonIcon />
-            <HeaderLoginModal />
-            <Button
+            {/* <HeaderLoginModal /> */}
+            <Stack
               onClick={() => {
                 router.push("/login");
               }}
-              sx={{
-                color: "#000",
-                fontWeight: "540",
-                fontSize: "16px",
-              }}
             >
-              <Typography> Нэвтрэх</Typography>
-            </Button>
+              <Typography
+                sx={{
+                  color: "#000",
+                  fontWeight: "550",
+                  fontSize: "15px",
+                }}
+              >
+                Нэвтрэх
+              </Typography>
+            </Stack>
           </Stack>
         </Grid>
       </Grid>

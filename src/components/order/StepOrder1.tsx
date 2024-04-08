@@ -1,4 +1,4 @@
-import { Grid, Input, Stack, TextField, Typography } from "@mui/material";
+import { Grid, Stack, TextField, Typography } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 import { OrderAdress1 } from "./OrderAdress1";
 import { OrderAdress2 } from "./OrderAdress2";
@@ -84,18 +84,21 @@ export const StepOrder1 = () => {
               }}
             >
               <Typography>Нэмэлт мэдээлэл</Typography>
-              <Input
+              <TextField
+                id="outlined-multiline-flexible"
+                // variant="outlined"
+                multiline
+                rows={5}
+                fullWidth
                 placeholder="Орц, давхар, орцны код ..."
                 sx={{
-                  py: 1,
-                  px: 2,
                   alignItems: "start",
                   border: "none",
-                  width: "384px",
-                  height: "112px",
+                  width: "380px",
+                  height: "148px",
                   backgroundColor: "#F7F7F8",
                 }}
-              ></Input>
+              ></TextField>
             </Grid>
             <Grid
               sx={{
