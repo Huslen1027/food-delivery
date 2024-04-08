@@ -1,8 +1,7 @@
-import { Button, CardMedia, Stack, Typography } from "@mui/material";
+import { CardMedia, Stack, Typography } from "@mui/material";
 import { userData } from "@/utils/Userdata";
 import EditIcon from "../Icon/userICon/EditIcon";
-import ClockIcon from "../Icon/userICon/ClockIcon";
-import GetoutIcon from "../Icon/userICon/GetoutICcon";
+
 export const User = () => {
   return (
     <Stack

@@ -1,23 +1,16 @@
 import { Stack, Typography } from "@mui/material";
-import Foodmenu from "@/utils/Foodmenu"; // Make sure this path is correct
+import Foodmenu from "@/utils/Foodmenu";
 import { useFoodData } from "../Context/FoodContext";
 import { CardModal } from "../Cards/ModalCard";
 import { useState } from "react";
 
-export const Admin = () => {
+export const Admin: React.FC = () => {
   const { foodData } = useFoodData();
-  const [menu, setMenu] = useState("Breakfast");
+  const [menu, setMenu] = useState<string>("Breakfast");
 
   const asd = (text: string) => {
     setMenu(text);
   };
-
-  interface CategoryType {
-    text: string;
-    icon: string;
-    plusicon: string;
-    create: string;
-  }
 
   const buttonStyle = (category: string) => ({
     "&.MuiButtonBase-root:hover": {
@@ -62,7 +55,7 @@ export const Admin = () => {
         </Typography>
 
         <Stack display="flex" direction="column" gap="26px" alignItems="start">
-          {Foodmenu.map((category: CategoryType, index: number) => (
+          {Foodmenu.map((category: any, index: number) => (
             <Stack
               onClick={() => asd(category.text)}
               key={index}
