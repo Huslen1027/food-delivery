@@ -66,17 +66,11 @@ export const StepOrder1 = () => {
           alignItems={"center"}
           gap={"40px"}
         >
-          <Stack
-            display={"flex"}
-            direction={"column"}
-            width={"384px"}
-            gap={"16px"}
-            alignItems={"start"}
-          >
+          <Grid width={"384px"} gap={"16px"} alignItems={"start"}>
             <OrderAdress1 />
             <OrderAdress2 />
             <OrderAdress3 />
-          </Stack>
+          </Grid>
           <Stack
             display={"flex"}
             direction={"column"}

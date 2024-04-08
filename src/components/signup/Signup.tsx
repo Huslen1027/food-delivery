@@ -1,6 +1,5 @@
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import {
-  Button,
   FormControl,
   FormGroup,
   IconButton,
@@ -31,12 +30,7 @@ export const Signup = () => {
     setPassword(e.target.value);
     setInput(!!e.target.value && !!email);
   };
-  interface datatype {
-    condition: string;
-    value1: string;
-    value2: string;
-  }
-  const match = ({ condition, value1, value2 }: datatype) => {
+  const match = (condition: boolean, value1: string, value2: string) => {
     return condition ? value1 : value2;
   };
   return (
@@ -140,17 +134,22 @@ export const Signup = () => {
               Үйлчилгээний нөхцөл зөвшөөрөх
             </Typography>
           </Stack>
-          <Button
-            variant={"contained"}
+          <Stack
+            direction={"row"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            borderRadius={"5px"}
             sx={{
-              backgroundColor: match(input, "#F7F7F8", "#18BA51"),
+              backgroundColor: match(input, "#18BA51", "#F7F7F8"),
               color: match(input, "#FFF", "#000"),
               width: "384px",
               padding: "8px 16px",
+              height: "48px",
+              cursor: "pointer",
             }}
           >
             Бүртгүүлэх
-          </Button>
+          </Stack>
         </Stack>
       </Stack>
     </Stack>

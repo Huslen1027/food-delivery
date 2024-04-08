@@ -1,4 +1,5 @@
 import * as React from "react";
+import HeaderLoginModal from "../Cards/HeaderLoginModal";
 import Searchicon from "../Icon/HeaderIcon/Searchicon";
 import IconButton from "@mui/material/IconButton";
 import { Button, InputBase, Stack, Typography } from "@mui/material";
@@ -112,7 +113,7 @@ export const Header = () => {
             }}
           >
             <PersonIcon />
-
+            <HeaderLoginModal />
             <Button
               onClick={() => {
                 router.push("/login");

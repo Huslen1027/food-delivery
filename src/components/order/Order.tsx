@@ -1,6 +1,7 @@
 import { Box, Container, Stack } from "@mui/material";
 import StepOrder1 from "./StepOrder1";
 import StepOrder2 from "./StepOrder2";
+
 export const Order = () => {
   return (
     <Box height={"1000px"} pt={"50px"}>

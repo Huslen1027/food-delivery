@@ -15,6 +15,7 @@ export const OrderAdress2 = () => {
 
   return (
     <Stack
+      mt={"13px"}
       display={"flex"}
       direction={"column"}
       width={"384px"}

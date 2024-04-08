@@ -1,6 +1,8 @@
 import { Button, CardMedia, Stack, Typography } from "@mui/material";
 import { userData } from "@/utils/Userdata";
 import EditIcon from "../Icon/userICon/EditIcon";
+import ClockIcon from "../Icon/userICon/ClockIcon";
+import GetoutIcon from "../Icon/userICon/GetoutICcon";
 export const User = () => {
   return (
     <Stack
@@ -78,7 +80,6 @@ export const User = () => {
         >
           <Stack
             width={"432px"}
-            height={"224px"}
             gap={"16px"}
             direction={"column"}
             px={"20px"}
@@ -117,24 +118,6 @@ export const User = () => {
                 <Stack sx={{ cursor: "pointer" }}> {e.editIcon}</Stack>
               </Stack>
             ))}
-          </Stack>
-          <Stack
-            display={"flex"}
-            direction={"column"}
-            alignItems={"center"}
-            gap={"32px"}
-          >
-            <Button
-              variant="contained"
-              sx={{
-                width: "392px",
-                height: "48px",
-                backgroundColor: "#18BA51",
-                color: "white",
-              }}
-            >
-              Хадгалах
-            </Button>
           </Stack>
         </Stack>
       </Stack>

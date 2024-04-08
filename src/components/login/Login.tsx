@@ -7,10 +7,12 @@ import {
   OutlinedInput,
   IconButton,
   FormGroup,
+  Grid,
 } from "@mui/material";
 import * as React from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import Link from "next/link";
+import { useRouter } from "next/router";
 export const Login = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -30,6 +32,7 @@ export const Login = () => {
     setPassword(e.target.value);
     setInput(!!e.target.value && !!email);
   };
+  const router = useRouter();
   return (
     <Stack
       direction={"row"}
@@ -85,16 +88,18 @@ export const Login = () => {
                 }
               />
             </FormControl>
-            <Typography
-              sx={{
-                color: "#3F4145",
-              }}
-              fontSize={"14px"}
-              display={"flex"}
-              justifyContent={"flex-end"}
-            >
-              Нууц үг сэргээх
-            </Typography>
+            <Grid onClick={() => router.push("/forgotpass")}>
+              <Typography
+                sx={{
+                  color: "#3F4145",
+                }}
+                fontSize={"14px"}
+                display={"flex"}
+                justifyContent={"flex-end"}
+              >
+                Нууц үг сэргээх
+              </Typography>
+            </Grid>
           </FormGroup>
         </Stack>
         <Stack direction="column" spacing={4}>
