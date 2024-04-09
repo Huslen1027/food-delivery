@@ -1,5 +1,5 @@
 import * as React from "react";
-// import HeaderLoginModal from "../Cards/HeaderLoginModal";
+import HeaderLoginModal from "../Cards/HeaderLoginModal";
 import Searchicon from "../Icon/HeaderIcon/Searchicon";
 import IconButton from "@mui/material/IconButton";
 import { InputBase, Stack, Typography } from "@mui/material";
@@ -126,22 +126,7 @@ export const Header = () => {
             }}
           >
             <PersonIcon />
-            {/* <HeaderLoginModal /> */}
-            <Stack
-              onClick={() => {
-                router.push("/login");
-              }}
-            >
-              <Typography
-                sx={{
-                  color: "#000",
-                  fontWeight: "550",
-                  fontSize: "15px",
-                }}
-              >
-                Нэвтрэх
-              </Typography>
-            </Stack>
+            <HeaderLoginModal />
           </Stack>
         </Grid>
       </Grid>

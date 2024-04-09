@@ -3,9 +3,11 @@ import Foodmenu from "@/utils/Foodmenu";
 import { useFoodData } from "../Context/FoodContext";
 import { CardModal } from "../Cards/ModalCard";
 import { useState } from "react";
-
+import { PlusIcon } from "../Icon/adminicon/PlusIcon";
+import CreateFoodCard from "../Cards/admincard/CreateFoodCard";
 export const Admin: React.FC = () => {
   const { foodData } = useFoodData();
+
   const [menu, setMenu] = useState<string>("Breakfast");
 
   const asd = (text: string) => {
@@ -72,10 +74,25 @@ export const Admin: React.FC = () => {
             >
               {category.text}
               {category.icon}
-              {category.plusicon}
-              {category.create}
             </Stack>
           ))}
+          <Stack
+            width="268px"
+            direction="row"
+            px="16px"
+            py="8px"
+            gap={"10px"}
+            alignItems="center"
+            borderRadius="8px"
+            border="1px solid #D6D8DB"
+            height="40px"
+            sx={{
+              cursor: "pointer",
+            }}
+          >
+            <PlusIcon />
+            <Typography color={"#5E6166"}>Create new category</Typography>
+          </Stack>
         </Stack>
       </Stack>
       <Stack
@@ -89,7 +106,7 @@ export const Admin: React.FC = () => {
       >
         <Stack
           direction="row"
-          width="884px"
+          width="854px"
           py="16px"
           alignItems="center"
           justifyContent="space-between"
@@ -97,22 +114,7 @@ export const Admin: React.FC = () => {
           <Typography fontSize="22px" fontWeight="550">
             {menu}
           </Typography>
-          <Stack
-            direction="row"
-            px="16px"
-            py="8px"
-            width="130px"
-            alignItems="center"
-            gap="1px"
-            borderRadius="4px"
-            sx={{
-              backgroundColor: "#18BA51",
-            }}
-          >
-            <Typography fontSize="15px" color="#FFF">
-              Add new food
-            </Typography>
-          </Stack>
+          <CreateFoodCard />
         </Stack>
         <Stack display="flex" direction="column" alignItems="center" gap="60px">
           <Stack gap={3} direction="row" flexWrap="wrap">

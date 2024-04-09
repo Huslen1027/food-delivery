@@ -1,4 +1,3 @@
-import { PlusIcon } from "@/components/Icon/adminicon/PlusIcon";
 import { MenuIcon } from "@/components/Icon/adminicon/MenuIcon";
 export const Foodmenu = [
   { text: "Breakfast", icon: <MenuIcon /> },
@@ -13,10 +12,6 @@ export const Foodmenu = [
   {
     text: "Dessert",
     icon: <MenuIcon />,
-  },
-  {
-    plusicon: <PlusIcon />,
-    create: "Create new category",
   },
 ];
 export default Foodmenu;

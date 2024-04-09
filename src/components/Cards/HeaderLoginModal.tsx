@@ -1,46 +1,52 @@
+import React, { useState } from "react";
 import {
-  FormControl,
-  FormGroup,
-  Grid,
-  IconButton,
-  OutlinedInput,
   Stack,
-  TextField,
-  Box,
-  Button,
   Typography,
   Modal,
+  Box,
+  FormControl,
+  FormGroup,
+  TextField,
+  OutlinedInput,
+  IconButton,
+  Button,
+  Grid,
 } from "@mui/material";
-import * as React from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import Link from "next/link";
 import { useRouter } from "next/router";
-export const HeaderLoginModal = () => {
-  const [open, setOpen] = React.useState(false);
+const HeaderLoginModal = () => {
+  const [open, setOpen] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [input, setInput] = useState(false);
+  const router = useRouter();
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
-  const [showPassword, setShowPassword] = React.useState(false);
-  const [input, setInput] = React.useState(false);
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
-  const handleMouseDownPassword = (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
-    event.preventDefault();
-  };
-  const HandleEmailCHange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleClickShowPassword = () => setShowPassword(!showPassword);
+  const handleEmailChange = (e: any) => {
     setEmail(e.target.value);
     setInput(!!e.target.value && !!password);
   };
-  const HandlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handlePasswordChange = (e: any) => {
     setPassword(e.target.value);
     setInput(!!e.target.value && !!email);
   };
-  const router = useRouter();
   return (
     <Stack>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Stack onClick={handleOpen}>
+        <Typography
+          sx={{
+            cursor: "pointer",
+            color: "#000",
+            fontWeight: "550",
+            fontSize: "15px",
+          }}
+        >
+          Нэвтрэх
+        </Typography>
+      </Stack>
       <Modal
         sx={{
           width: "full",
@@ -62,7 +68,6 @@ export const HeaderLoginModal = () => {
           borderRadius={"16px"}
           sx={{
             backgroundColor: "#fff",
-            border: "1px solid #DADCE0",
           }}
         >
           <Stack direction={"row"} width={"full"} justifyContent={"center"}>
@@ -78,26 +83,23 @@ export const HeaderLoginModal = () => {
                       sx={{
                         backgroundColor: "#F7F7F8",
                       }}
-                      onChange={HandleEmailCHange}
-                      id="fullWidth"
+                      onChange={handleEmailChange}
                       placeholder="Имэйл хаягаа оруулна уу"
                     />
                   </FormControl>
                   <FormControl sx={{ mt: 3, width: "100%" }} variant="outlined">
                     <Typography fontSize={"14px"}>Нууц үг</Typography>
                     <OutlinedInput
-                      onChange={HandlePasswordChange}
+                      onChange={handlePasswordChange}
                       sx={{
                         backgroundColor: "#F7F7F8",
                       }}
                       placeholder="Нууц үг"
-                      id="outlined-adornment-password"
                       type={showPassword ? "text" : "password"}
                       endAdornment={
                         <IconButton
                           aria-label="toggle password visibility"
                           onClick={handleClickShowPassword}
-                          onMouseDown={handleMouseDownPassword}
                         >
                           {showPassword ? <VisibilityOff /> : <Visibility />}
                         </IconButton>
