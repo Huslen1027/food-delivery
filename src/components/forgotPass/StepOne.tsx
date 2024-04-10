@@ -5,7 +5,8 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import { useRouter } from "next/router";
+
+import { useState } from "react";
 
 const btnStyle = {
   backgroundColor: "#18BA51",
@@ -16,7 +17,14 @@ const btnStyle = {
 };
 
 export const StepOne = () => {
-  const router = useRouter();
+  const [comp, setComp] = useState("email");
+
+  const handleComp = () => {
+    setComp("stepTwo");
+  };
+  {
+    comp;
+  }
   return (
     <Stack
       sx={{
@@ -34,7 +42,7 @@ export const StepOne = () => {
         gap={"40px"}
         height={"330px"}
       >
-        <Typography fontSize={"28px"} fontWeight={"550px"}>
+        <Typography fontSize={"28px"} fontWeight={"550"}>
           Нууц үг сэргээх
         </Typography>
         <Stack>
@@ -43,7 +51,6 @@ export const StepOne = () => {
             <TextField
               sx={{
                 backgroundColor: "#F7F7F8",
-
                 width: "384px",
                 height: "54px",
               }}
@@ -52,17 +59,12 @@ export const StepOne = () => {
             />
           </FormControl>
         </Stack>
-        <Button
-          onClick={() => {
-            router.push("");
-          }}
-          sx={btnStyle}
-          variant="contained"
-        >
-          {"Үргэлжлүүлэх"}
+        <Button onClick={handleComp} sx={btnStyle} variant="contained">
+          Үргэлжлүүлэх
         </Button>
       </Stack>
     </Stack>
   );
 };
+
 export default StepOne;
