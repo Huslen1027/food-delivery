@@ -1,6 +1,7 @@
 import { useCartItems } from "../Context/CartContext";
 import { Box, Button, CardMedia, Stack, Typography } from "@mui/material";
 import DeleteIcon from "../Icon/Modalicon/Deleteicon";
+
 import React from "react";
 const buttonStyle = {
   maxWidth: "45px",

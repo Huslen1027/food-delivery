@@ -3,8 +3,9 @@ import Foodmenu from "@/utils/Foodmenu";
 import { useFoodData } from "../Context/FoodContext";
 import { CardModal } from "../Cards/ModalCard";
 import { useState } from "react";
-import { PlusIcon } from "../Icon/adminicon/PlusIcon";
+import CreateCategoryCard from "../Cards/admincard/CreateCategoryCard";
 import CreateFoodCard from "../Cards/admincard/CreateFoodCard";
+
 export const Admin: React.FC = () => {
   const { foodData } = useFoodData();
 
@@ -76,23 +77,7 @@ export const Admin: React.FC = () => {
               {category.icon}
             </Stack>
           ))}
-          <Stack
-            width="268px"
-            direction="row"
-            px="16px"
-            py="8px"
-            gap={"10px"}
-            alignItems="center"
-            borderRadius="8px"
-            border="1px solid #D6D8DB"
-            height="40px"
-            sx={{
-              cursor: "pointer",
-            }}
-          >
-            <PlusIcon />
-            <Typography color={"#5E6166"}>Create new category</Typography>
-          </Stack>
+          <CreateCategoryCard />
         </Stack>
       </Stack>
       <Stack

@@ -69,7 +69,11 @@ const Page = () => {
           </Stack>
         )}
         <Stack direction={"row"}>
-          <Input type="file" onChange={fileChangeHandler}></Input>
+          <Input
+            type="file"
+            placeholder="add image"
+            onChange={fileChangeHandler}
+          ></Input>
           <Button onClick={uploadHandler}>Upload</Button>
           {imageUrl && (
             <CardMedia

@@ -72,7 +72,15 @@ export const CreateFoodCard = () => {
             justifyContent={"space-between"}
             borderBottom={"1px solid #E0E0E0"}
           >
-            <DeleteIcon />
+            <Stack
+              sx={{
+                cursor: "pointer",
+              }}
+              onClick={handleClose}
+            >
+              <DeleteIcon />
+            </Stack>
+
             <Typography fontSize={"24px"} fontWeight={"550"}>
               Create food
             </Typography>
