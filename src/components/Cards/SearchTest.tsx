@@ -2,17 +2,6 @@ import { Grid, List, Stack, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { useCartItems } from "../Context/CartContext";
 
-interface data {
-  id: number;
-  category: string;
-  foodName: string;
-  imagePath: string;
-  ingredients: string[];
-  price: number;
-  sale: number;
-  stock: number;
-}
-
 export const SearchText = () => {
   const { cartFoods } = useCartItems();
   console.log("data", cartFoods);

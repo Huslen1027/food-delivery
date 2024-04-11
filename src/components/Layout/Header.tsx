@@ -9,7 +9,7 @@ import Grid from "@mui/material/Grid";
 import PersonIcon from "../Icon/HeaderIcon/PersonIcon";
 import { useRouter } from "next/router";
 import { BasketDrawer } from "../Drawer/Drawer";
-import SearchText from "../Cards/SearchTest";
+
 export const Header = () => {
   const router = useRouter();
   return (
@@ -103,7 +103,7 @@ export const Header = () => {
           </IconButton>
           <InputBase placeholder="Хайх" type="text" />
         </Paper>
-        <SearchText />
+
         <Grid display={"flex"}>
           <Stack direction={"row"} alignItems={"center"} width={"134px"}>
             <BasketDrawer />
@@ -137,4 +137,3 @@ export const Header = () => {
 };
 
 export default Header;
-
