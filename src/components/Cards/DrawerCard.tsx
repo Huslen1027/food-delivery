@@ -13,6 +13,7 @@ const buttonStyle = {
 };
 export const DrawerCard = () => {
   const { cartFoods } = useCartItems();
+  console.log("drawer", cartFoods);
 
   return (
     <Stack justifyContent={"center"} alignItems={"center"}>
